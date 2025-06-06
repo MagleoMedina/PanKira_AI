@@ -1,0 +1,7 @@
+# Dependencias principales del proyecto
+pandas
+scikit-learn
+customtkinter
+tensorflow
+joblib
+# Agrega aquí otras dependencias según las necesidades del proyecto
