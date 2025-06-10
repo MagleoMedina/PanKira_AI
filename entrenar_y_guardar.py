@@ -23,8 +23,8 @@ PANES = [
     "Pan_De_Arequipe_Cantidad"
 ]
 
+# Cambia aquí el nombre del archivo
 df = pd.read_csv("pankira.csv")
-# Incluir la columna Clima
 cols = ["Dia_De_La_Semana", "Clima"] + PANES
 df = df[cols]
 data = pd.DataFrame(df.to_numpy(), columns=cols)
@@ -32,29 +32,28 @@ data = pd.DataFrame(df.to_numpy(), columns=cols)
 for pan in PANES:
     data[pan] = pd.to_numeric(data[pan], errors='coerce')
 
+# Codificar Dia_De_La_Semana y Clima
 le_dia = LabelEncoder()
 data['Dia_enc'] = le_dia.fit_transform(data['Dia_De_La_Semana'])
 
 le_clima = LabelEncoder()
 data['Clima_enc'] = le_clima.fit_transform(data['Clima'])
 
-# Crear carpeta models si no existe
+# Guardar los encoders y las clases
 os.makedirs("models", exist_ok=True)
-
-# Guardar label encoder y días de la semana en models
 joblib.dump(le_dia, "models/label_encoder_dia.pkl")
 joblib.dump(list(le_dia.classes_), "models/dias_semana.pkl")
-# Guardar label encoder y clases de clima
 joblib.dump(le_clima, "models/label_encoder_clima.pkl")
 joblib.dump(list(le_clima.classes_), "models/climas.pkl")
 
 total = len(PANES)
 for idx, pan in enumerate(PANES):
-    # Usar tanto Dia_enc como Clima_enc como variables de entrada
     X = data[['Dia_enc', 'Clima_enc']].values
-    y = data[pan].values
-    scaler = StandardScaler()
-    X_scaled = scaler.fit_transform(X)
+    y = data[pan].values.reshape(-1, 1)
+    scaler_X = StandardScaler()
+    X_scaled = scaler_X.fit_transform(X)
+    scaler_y = StandardScaler()
+    y_scaled = scaler_y.fit_transform(y)
     model = keras.Sequential([
         keras.layers.Input(shape=(2,)),
         keras.layers.Dense(8, activation='relu'),
@@ -62,9 +61,10 @@ for idx, pan in enumerate(PANES):
         keras.layers.Dense(1)
     ])
     model.compile(optimizer='adam', loss='mse', metrics=['mae'])
-    model.fit(X_scaled, y, epochs=40, batch_size=8, verbose=0)
+    model.fit(X_scaled, y_scaled, epochs=40, batch_size=8, verbose=0)
     model.save(f"models/modelo_{pan}.keras")
-    joblib.dump(scaler, f"models/scaler_{pan}.pkl")
+    joblib.dump(scaler_X, f"models/scaler_{pan}.pkl")
+    joblib.dump(scaler_y, f"models/scaler_y_{pan}.pkl")  # Guarda el scaler de y
     percent = int(((idx + 1) / total) * 100)
     sys.stdout.write(f"\rEntrenando modelos: [{'#' * percent}{'.' * (100 - percent)}] {percent}%")
     sys.stdout.flush()

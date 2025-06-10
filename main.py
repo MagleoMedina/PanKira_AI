@@ -17,10 +17,14 @@ class MainApp:
         # Cargar objetos guardados desde la carpeta models
         self.le_dia = joblib.load("models/label_encoder_dia.pkl")
         self.DIAS_SEMANA = joblib.load("models/dias_semana.pkl")
+        # Ordenar días de la semana
+        orden_dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
+        self.DIAS_SEMANA = [dia for dia in orden_dias if dia in self.DIAS_SEMANA]
         self.le_clima = joblib.load("models/label_encoder_clima.pkl")
         self.CLIMAS = joblib.load("models/climas.pkl")
         self.modelos = {pan: keras.models.load_model(f"models/modelo_{pan}.keras") for pan in self.PANES}
         self.scalers = {pan: joblib.load(f"models/scaler_{pan}.pkl") for pan in self.PANES}
+        self.scalers_y = {pan: joblib.load(f"models/scaler_y_{pan}.pkl") for pan in self.PANES}
 
         # Limpiar el frame antes de agregar nuevos widgets
         for widget in parent_frame.winfo_children():
@@ -78,7 +82,8 @@ class MainApp:
             dia_enc = self.le_dia.transform([dia])[0]
             clima_enc = self.le_clima.transform([clima])[0]
             X_input = self.scalers[pan].transform([[dia_enc, clima_enc]])
-            pred = self.modelos[pan].predict(X_input, verbose=0)[0][0]
+            pred_scaled = self.modelos[pan].predict(X_input, verbose=0)[0][0]
+            pred = self.scalers_y[pan].inverse_transform([[pred_scaled]])[0][0]
             self.label_result.configure(
                 text=f"Demanda estimada de {pan.replace('_Cantidad','').replace('_',' ')}: {pred:.0f}"
             )

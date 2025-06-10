@@ -1,151 +1,846 @@
-Fecha_Hora,Dia_De_La_Semana,Pan_Canilla_Cantidad,Pan_Frances_Cantidad,Pan_Colombiano_Cantidad,Pan_Sobao_Cantidad,Pan_Dulce_Cantidad,Pan_De_Coco_Cantidad,Pan_De_Arequipe_Cantidad,Clima
-2025-06-01 07:15:00,Domingo,15,10,5,8,3,2,1,soleado
-2025-06-01 08:00:00,Domingo,20,12,6,10,5,3,2,soleado
-2025-06-01 09:30:00,Domingo,10,8,4,6,2,1,0,nublado
-2025-06-01 10:45:00,Domingo,18,15,7,9,4,2,1,lluvioso
-2025-06-01 11:50:00,Domingo,12,9,3,7,1,0,0,lluvioso
-2025-06-02 07:20:00,Lunes,25,18,10,12,6,4,3,soleado
-2025-06-02 08:10:00,Lunes,15,10,5,8,3,2,1,soleado
-2025-06-02 09:40:00,Lunes,22,14,8,11,5,3,2,nublado
-2025-06-02 11:00:00,Lunes,17,11,6,9,4,2,1,lluvioso
-2025-06-02 12:05:00,Lunes,10,7,2,5,1,0,0,soleado
-2025-06-03 07:30:00,Martes,30,20,12,15,8,5,4,nublado
-2025-06-03 08:25:00,Martes,20,13,7,10,4,3,2,soleado
-2025-06-03 09:55:00,Martes,25,16,9,13,6,4,3,soleado
-2025-06-03 11:15:00,Martes,18,12,6,10,5,3,2,lluvioso
-2025-06-03 12:20:00,Martes,14,8,3,6,2,1,0,nublado
-2025-06-04 07:40:00,Miércoles,35,25,15,18,10,7,5,soleado
-2025-06-04 08:35:00,Miércoles,28,18,11,14,7,5,4,soleado
-2025-06-04 10:10:00,Miércoles,32,20,13,16,9,6,5,nublado
-2025-06-04 11:30:00,Miércoles,25,16,10,13,8,5,4,lluvioso
-2025-06-04 12:40:00,Miércoles,16,9,4,7,3,2,1,soleado
-2025-06-05 07:50:00,Jueves,40,30,20,22,12,8,6,nublado
-2025-06-05 08:45:00,Jueves,30,22,15,17,10,7,5,lluvioso
-2025-06-05 10:20:00,Jueves,35,25,18,20,11,8,6,soleado
-2025-06-05 11:40:00,Jueves,28,20,14,16,9,6,5,nublado
-2025-06-05 12:55:00,Jueves,18,10,5,8,4,3,2,lluvioso
-2025-06-06 07:00:00,Viernes,38,28,19,21,11,7,5,soleado
-2025-06-06 08:10:00,Viernes,32,24,16,19,10,6,4,soleado
-2025-06-06 09:20:00,Viernes,25,18,12,14,7,4,3,nublado
-2025-06-06 10:30:00,Viernes,20,15,10,12,6,3,2,lluvioso
-2025-06-06 11:40:00,Viernes,15,10,7,9,5,2,1,soleado
-2025-06-07 07:05:00,Sábado,45,35,25,28,15,10,8,nublado
-2025-06-07 08:15:00,Sábado,40,30,22,25,13,9,7,lluvioso
-2025-06-07 09:25:00,Sábado,30,22,15,18,9,6,4,soleado
-2025-06-07 10:35:00,Sábado,25,18,12,15,8,5,3,nublado
-2025-06-07 11:45:00,Sábado,20,15,10,12,6,4,2,lluvioso
-2025-06-08 07:00:00,Domingo,18,12,6,9,4,3,2,soleado
-2025-06-08 08:00:00,Domingo,22,15,8,11,5,4,3,soleado
-2025-06-08 09:15:00,Domingo,15,10,5,7,3,2,1,nublado
-2025-06-08 10:30:00,Domingo,20,13,7,9,4,3,2,lluvioso
-2025-06-08 11:45:00,Domingo,14,9,4,6,2,1,0,soleado
-2025-06-09 07:10:00,Lunes,28,20,12,15,7,5,4,nublado
-2025-06-09 08:20:00,Lunes,18,12,7,10,4,3,2,soleado
-2025-06-09 09:30:00,Lunes,24,16,9,12,6,4,3,soleado
-2025-06-09 10:40:00,Lunes,19,13,8,11,5,3,2,lluvioso
-2025-06-09 11:50:00,Lunes,11,8,3,6,2,1,0,nublado
-2025-06-10 07:15:00,Martes,32,22,14,16,9,6,5,soleado
-2025-06-10 08:25:00,Martes,22,15,8,11,5,3,2,soleado
-2025-06-10 09:35:00,Martes,28,18,11,14,7,5,4,nublado
-2025-06-10 10:45:00,Martes,20,14,9,12,6,4,3,lluvioso
-2025-06-10 11:55:00,Martes,15,9,4,7,3,2,1,soleado
-2025-06-11 07:20:00,Miércoles,38,28,18,20,11,7,6,nublado
-2025-06-11 08:30:00,Miércoles,30,20,13,15,8,5,4,lluvioso
-2025-06-11 09:40:00,Miércoles,34,24,16,18,10,7,6,soleado
-2025-06-11 10:50:00,Miércoles,26,17,11,14,7,5,4,nublado
-2025-06-11 12:00:00,Miércoles,17,10,5,8,4,3,2,lluvioso
-2025-06-12 07:25:00,Jueves,42,32,22,25,14,9,7,soleado
-2025-06-12 08:35:00,Jueves,32,24,17,19,11,8,6,soleado
-2025-06-12 09:45:00,Jueves,37,27,20,22,13,9,7,nublado
-2025-06-12 10:55:00,Jueves,30,22,15,18,10,7,5,lluvioso
-2025-06-12 12:05:00,Jueves,20,12,6,9,5,3,2,soleado
-2025-06-13 07:30:00,Viernes,40,30,20,22,12,8,6,nublado
-2025-06-13 08:40:00,Viernes,35,26,18,20,11,7,5,lluvioso
-2025-06-13 09:50:00,Viernes,30,22,15,17,10,6,4,soleado
-2025-06-13 11:00:00,Viernes,25,18,12,14,8,5,3,nublado
-2025-06-13 12:10:00,Viernes,18,11,7,9,5,3,2,lluvioso
-2025-06-14 07:00:00,Sábado,48,38,28,30,16,11,9,soleado
-2025-06-14 08:10:00,Sábado,42,33,24,27,14,10,8,soleado
-2025-06-14 09:20:00,Sábado,35,26,18,21,12,8,6,nublado
-2025-06-14 10:30:00,Sábado,30,22,15,18,10,7,5,lluvioso
-2025-06-14 11:40:00,Sábado,22,16,11,13,7,5,3,soleado
-2025-06-15 07:05:00,Domingo,20,14,8,10,5,4,3,nublado
-2025-06-15 08:15:00,Domingo,25,17,10,13,6,5,4,lluvioso
-2025-06-15 09:25:00,Domingo,18,12,6,9,4,3,2,soleado
-2025-06-15 10:35:00,Domingo,23,15,9,11,5,4,3,nublado
-2025-06-15 11:45:00,Domingo,16,10,5,7,3,2,1,lluvioso
-2025-06-16 07:10:00,Lunes,30,20,12,15,7,5,4,soleado
-2025-06-16 08:20:00,Lunes,20,13,7,10,4,3,2,soleado
-2025-06-16 09:30:00,Lunes,26,17,10,13,6,4,3,nublado
-2025-06-16 10:40:00,Lunes,21,14,9,11,5,3,2,lluvioso
-2025-06-16 11:50:00,Lunes,12,9,4,6,2,1,0,soleado
-2025-06-17 07:15:00,Martes,35,25,15,18,10,7,5,nublado
-2025-06-17 08:25:00,Martes,25,16,9,12,6,4,3,lluvioso
-2025-06-17 09:35:00,Martes,30,20,12,15,8,5,4,soleado
-2025-06-17 10:45:00,Martes,22,15,10,13,7,4,3,nublado
-2025-06-17 11:55:00,Martes,16,10,5,8,4,2,1,lluvioso
-2025-06-18 07:20:00,Miércoles,40,30,20,22,12,8,6,soleado
-2025-06-18 08:30:00,Miércoles,30,22,15,17,10,7,5,nublado
-2025-06-18 09:40:00,Miércoles,35,25,18,20,11,8,6,lluvioso
-2025-06-18 10:50:00,Miércoles,28,20,14,16,9,6,5,soleado
-2025-06-18 12:00:00,Miércoles,18,11,6,9,5,3,2,nublado
-2025-06-19 07:25:00,Jueves,45,35,25,28,15,10,8,lluvioso
-2025-06-19 08:35:00,Jueves,35,27,20,22,12,9,7,soleado
-2025-06-19 09:45:00,Jueves,40,30,22,25,13,10,8,nublado
-2025-06-19 10:55:00,Jueves,32,24,17,19,11,8,6,lluvioso
-2025-06-19 12:05:00,Jueves,22,14,8,11,6,4,3,soleado
-2025-06-20 07:30:00,Viernes,42,32,22,25,14,9,7,nublado
-2025-06-20 08:40:00,Viernes,38,28,20,22,13,8,6,lluvioso
-2025-06-20 09:50:00,Viernes,32,24,16,19,11,7,5,soleado
-2025-06-20 11:00:00,Viernes,27,20,13,16,9,6,4,nublado
-2025-06-20 12:10:00,Viernes,20,13,9,11,7,4,2,lluvioso
-2025-06-21 07:00:00,Sábado,50,40,30,35,18,12,10,soleado
-2025-06-21 08:10:00,Sábado,45,35,26,30,16,11,9,soleado
-2025-06-21 09:20:00,Sábado,38,28,20,24,14,9,7,nublado
-2025-06-21 10:30:00,Sábado,33,24,17,20,12,8,6,lluvioso
-2025-06-21 11:40:00,Sábado,25,18,12,15,9,6,4,soleado
-2025-06-22 07:05:00,Domingo,22,16,10,13,7,5,4,nublado
-2025-06-22 08:15:00,Domingo,28,20,13,16,8,6,5,lluvioso
-2025-06-22 09:25:00,Domingo,20,14,8,11,6,4,3,soleado
-2025-06-22 10:35:00,Domingo,25,18,11,14,7,5,4,nublado
-2025-06-22 11:45:00,Domingo,18,12,7,10,5,3,2,lluvioso
-2025-06-23 07:10:00,Lunes,32,22,14,16,9,6,5,soleado
-2025-06-23 08:20:00,Lunes,22,15,8,11,5,3,2,soleado
-2025-06-23 09:30:00,Lunes,28,18,11,14,7,5,4,nublado
-2025-06-23 10:40:00,Lunes,20,13,9,12,6,4,3,lluvioso
-2025-06-23 11:50:00,Lunes,14,9,4,7,3,2,1,soleado
-2025-06-24 07:15:00,Martes,38,28,18,20,11,7,6,nublado
-2025-06-24 08:25:00,Martes,28,20,13,15,8,5,4,lluvioso
-2025-06-24 09:35:00,Martes,33,24,16,18,10,7,6,soleado
-2025-06-24 10:45:00,Martes,25,17,11,14,7,5,4,nublado
-2025-06-24 11:55:00,Martes,17,10,5,8,4,3,2,lluvioso
-2025-06-25 07:20:00,Miércoles,42,32,22,25,14,9,7,soleado
-2025-06-25 08:30:00,Miércoles,32,24,17,19,11,8,6,nublado
-2025-06-25 09:40:00,Miércoles,37,27,20,22,13,9,7,lluvioso
-2025-06-25 10:50:00,Miércoles,30,22,15,18,10,7,5,soleado
-2025-06-25 12:00:00,Miércoles,20,12,6,9,5,3,2,nublado
-2025-06-26 07:25:00,Jueves,40,30,20,22,12,8,6,lluvioso
-2025-06-26 08:35:00,Jueves,35,26,18,20,11,7,5,soleado
-2025-06-26 09:45:00,Jueves,30,22,15,17,10,6,4,nublado
-2025-06-26 10:55:00,Jueves,25,18,12,14,8,5,3,lluvioso
-2025-06-26 12:05:00,Jueves,18,11,7,9,5,3,2,soleado
-2025-06-27 07:30:00,Viernes,45,35,25,28,15,10,8,nublado
-2025-06-27 08:40:00,Viernes,40,30,22,25,13,9,7,lluvioso
-2025-06-27 09:50:00,Viernes,33,24,17,20,12,8,6,soleado
-2025-06-27 11:00:00,Viernes,28,20,14,17,10,7,5,nublado
-2025-06-27 12:10:00,Viernes,20,13,9,12,7,4,3,lluvioso
-2025-06-28 07:00:00,Sábado,52,42,32,38,20,14,12,soleado
-2025-06-28 08:10:00,Sábado,48,38,28,32,18,13,11,soleado
-2025-06-28 09:20:00,Sábado,40,30,24,28,16,11,9,nublado
-2025-06-28 10:30:00,Sábado,35,26,20,24,14,10,8,lluvioso
-2025-06-28 11:40:00,Sábado,28,20,15,18,12,8,6,soleado
-2025-06-29 07:05:00,Domingo,25,18,12,15,9,6,5,nublado
-2025-06-29 08:15:00,Domingo,30,22,15,18,10,7,6,lluvioso
-2025-06-29 09:25:00,Domingo,22,15,10,13,7,5,4,soleado
-2025-06-29 10:35:00,Domingo,27,20,13,16,8,6,5,nublado
-2025-06-29 11:45:00,Domingo,20,13,8,11,6,4,3,lluvioso
-2025-06-30 07:10:00,Lunes,35,25,15,18,10,7,5,soleado
-2025-06-30 08:20:00,Lunes,25,17,10,13,7,5,4,soleado
-2025-06-30 09:30:00,Lunes,30,20,13,16,8,6,5,nublado
-2025-06-30 10:40:00,Lunes,22,15,10,13,7,5,4,lluvioso
-2025-06-30 11:50:00,Lunes,15,10,5,8,4,3,2,soleado
+Fecha,Dia_De_La_Semana,Pan_Canilla_Cantidad,Pan_Frances_Cantidad,Pan_Colombiano_Cantidad,Pan_Sobao_Cantidad,Pan_Dulce_Cantidad,Pan_De_Coco_Cantidad,Pan_De_Arequipe_Cantidad,Clima
+2025-06-01,Domingo,75,54,25,40,15,8,4,soleado_lluvioso
+2025-06-02,Lunes,89,60,31,45,19,11,7,nublado
+2025-06-03,Martes,107,69,37,54,25,16,11,soleado_nublado
+2025-06-04,Miércoles,136,88,53,68,37,25,19,lluvioso
+2025-06-05,Jueves,151,107,62,79,36,26,19,soleado_lluvioso
+2025-06-06,Viernes,130,87,64,86,41,27,15,soleado
+2025-06-07,Sábado,160,120,84,100,51,34,24,nublado_lluvioso
+2025-06-08,Domingo,89,59,30,43,18,13,8,soleado_nublado_lluvioso
+2025-06-09,Lunes,100,69,39,54,24,15,11,soleado
+2025-06-10,Martes,117,78,46,60,30,20,15,nublado_lluvioso
+2025-06-11,Miércoles,145,99,58,75,40,27,21,soleado_lluvioso
+2025-06-12,Jueves,161,115,80,93,53,36,27,soleado_nublado
+2025-06-13,Viernes,148,107,62,82,46,29,20,soleado
+2025-06-14,Sábado,177,135,100,109,59,41,31,nublado
+2025-06-15,Domingo,102,78,48,60,28,21,15,soleado_nublado
+2025-06-16,Lunes,109,73,42,55,27,15,11,lluvioso
+2025-06-17,Martes,128,83,49,66,35,22,16,soleado_lluvioso
+2025-06-18,Miércoles,151,108,73,84,47,32,25,soleado
+2025-06-19,Jueves,174,120,77,95,47,33,27,nublado_lluvioso
+2025-06-20,Viernes,157,117,80,94,54,34,24,soleado
+2025-06-21,Sábado,196,145,105,129,69,46,36,nublado_lluvioso
+2025-06-22,Domingo,113,80,49,64,33,23,18,soleado
+2025-06-23,Lunes,116,77,46,58,31,20,15,nublado_lluvioso
+2025-06-24,Martes,141,99,57,75,39,27,21,soleado
+2025-06-25,Miércoles,161,115,80,93,53,36,27,nublado_lluvioso
+2025-06-26,Jueves,148,107,62,82,46,29,20,soleado
+2025-06-27,Viernes,156,109,77,92,54,38,29,nublado_lluvioso
+2025-06-28,Sábado,183,136,109,132,80,54,46,soleado
+2025-06-29,Domingo,104,78,48,63,30,22,18,nublado_lluvioso
+2025-06-30,Lunes,127,84,53,65,36,26,20,soleado
+2025-07-01,Martes,112,75,44,58,28,19,13,soleado_nublado
+2025-07-02,Miércoles,140,95,55,72,38,26,20,lluvioso
+2025-07-03,Jueves,155,110,65,82,37,27,20,soleado_lluvioso
+2025-07-04,Viernes,135,90,66,89,42,28,16,soleado
+2025-07-05,Sábado,165,123,87,103,52,35,25,nublado_lluvioso
+2025-07-06,Domingo,92,61,32,46,19,14,9,soleado_nublado_lluvioso
+2025-07-07,Lunes,103,71,40,57,25,16,12,soleado
+2025-07-08,Martes,120,80,48,63,31,21,16,nublado_lluvioso
+2025-07-09,Miércoles,148,102,60,78,41,28,22,soleado_lluvioso
+2025-07-10,Jueves,164,118,83,96,54,37,28,soleado_nublado
+2025-07-11,Viernes,151,110,64,85,47,30,21,soleado
+2025-07-12,Sábado,180,138,103,112,60,42,32,nublado
+2025-07-13,Domingo,105,80,50,63,29,22,16,soleado_nublado
+2025-07-14,Lunes,112,76,43,58,28,16,12,lluvioso
+2025-07-15,Martes,131,86,50,69,36,23,17,soleado_lluvioso
+2025-07-16,Miércoles,154,111,76,87,48,33,26,soleado
+2025-07-17,Jueves,177,123,80,98,48,34,28,nublado_lluvioso
+2025-07-18,Viernes,160,120,83,97,55,35,25,soleado
+2025-07-19,Sábado,199,148,108,132,70,47,37,nublado_lluvioso
+2025-07-20,Domingo,116,83,50,67,34,24,19,soleado
+2025-07-21,Lunes,119,80,47,61,32,21,16,nublado_lluvioso
+2025-07-22,Martes,144,102,59,78,40,28,22,soleado
+2025-07-23,Miércoles,164,118,83,96,54,37,28,nublado_lluvioso
+2025-07-24,Jueves,151,110,64,85,47,30,21,soleado
+2025-07-25,Viernes,159,112,80,95,55,39,30,nublado_lluvioso
+2025-07-26,Sábado,186,139,112,135,81,55,47,soleado
+2025-07-27,Domingo,107,81,50,66,31,23,19,nublado_lluvioso
+2025-07-28,Lunes,130,87,55,68,37,27,21,soleado
+2025-07-29,Martes,115,77,45,61,29,20,14,soleado_nublado
+2025-07-30,Miércoles,143,97,56,73,39,27,21,lluvioso
+2025-07-31,Jueves,158,109,63,80,38,27,20,soleado_lluvioso
+2025-08-01,Viernes,138,92,68,92,43,29,17,soleado
+2025-08-02,Sábado,168,126,90,106,53,36,26,nublado_lluvioso
+2025-08-03,Domingo,95,64,34,49,20,15,10,soleado_nublado_lluvioso
+2025-08-04,Lunes,106,73,42,59,26,17,13,soleado
+2025-08-05,Martes,123,82,49,66,32,22,17,nublado_lluvioso
+2025-08-06,Miércoles,151,105,62,81,42,29,23,soleado_lluvioso
+2025-08-07,Jueves,167,121,85,99,55,38,29,soleado_nublado
+2025-08-08,Viernes,154,113,66,88,48,31,22,soleado
+2025-08-09,Sábado,183,141,106,115,61,43,33,nublado
+2025-08-10,Domingo,108,83,52,65,30,23,17,soleado_nublado
+2025-08-11,Lunes,115,78,45,58,29,17,13,lluvioso
+2025-08-12,Martes,134,88,51,70,37,24,18,soleado_lluvioso
+2025-08-13,Miércoles,157,113,79,90,49,34,27,soleado
+2025-08-14,Jueves,180,126,82,101,49,35,29,nublado_lluvioso
+2025-08-15,Viernes,163,123,86,100,56,36,26,soleado
+2025-08-16,Sábado,202,151,111,135,71,48,38,nublado_lluvioso
+2025-08-17,Domingo,119,86,52,70,35,25,20,soleado
+2025-08-18,Lunes,122,83,49,64,33,22,17,nublado_lluvioso
+2025-08-19,Martes,147,105,61,81,41,29,23,soleado
+2025-08-20,Miércoles,167,121,86,99,55,38,29,nublado_lluvioso
+2025-08-21,Jueves,154,113,66,88,48,31,22,soleado
+2025-08-22,Viernes,162,115,83,98,56,40,31,nublado_lluvioso
+2025-08-23,Sábado,189,142,115,138,82,56,48,soleado
+2025-08-24,Domingo,110,84,52,69,32,24,20,nublado_lluvioso
+2025-08-25,Lunes,133,90,57,71,38,28,22,soleado
+2025-08-26,Martes,118,80,48,64,30,21,15,soleado_nublado
+2025-08-27,Miércoles,146,100,59,76,40,28,22,lluvioso
+2025-08-28,Jueves,161,112,65,83,39,28,21,soleado_lluvioso
+2025-08-29,Viernes,141,95,70,95,44,30,18,soleado
+2025-08-30,Sábado,171,129,93,109,54,37,27,nublado_lluvioso
+2025-08-31,Domingo,98,67,36,52,21,16,11,soleado_nublado_lluvioso
+2025-09-01,Lunes,109,76,44,62,27,18,14,soleado
+2025-09-02,Martes,126,85,50,69,33,23,18,nublado_lluvioso
+2025-09-03,Miércoles,154,108,64,84,43,30,24,soleado_lluvioso
+2025-09-04,Jueves,170,124,88,102,56,39,30,soleado_nublado
+2025-09-05,Viernes,157,116,68,91,49,32,23,soleado
+2025-09-06,Sábado,186,144,109,118,62,44,34,nublado
+2025-09-07,Domingo,111,86,54,68,31,24,18,soleado_nublado
+2025-09-08,Lunes,118,81,47,61,30,18,14,lluvioso
+2025-09-09,Martes,137,91,53,73,38,25,19,soleado_lluvioso
+2025-09-10,Miércoles,160,116,82,93,50,35,28,soleado
+2025-09-11,Jueves,183,129,85,104,50,36,30,nublado_lluvioso
+2025-09-12,Viernes,166,126,89,103,57,37,27,soleado
+2025-09-13,Sábado,205,154,114,138,72,49,39,nublado_lluvioso
+2025-09-14,Domingo,122,89,55,73,36,26,21,soleado
+2025-09-15,Lunes,125,86,51,67,34,23,18,nublado_lluvioso
+2025-09-16,Martes,150,108,63,84,42,30,24,soleado
+2025-09-17,Miércoles,170,124,89,102,56,39,30,nublado_lluvioso
+2025-09-18,Jueves,157,116,68,91,49,32,23,soleado
+2025-09-19,Viernes,165,118,86,101,57,41,32,nublado_lluvioso
+2025-09-20,Sábado,192,145,118,141,83,57,49,soleado
+2025-09-21,Domingo,113,87,55,72,33,25,21,nublado_lluvioso
+2025-09-22,Lunes,136,93,60,74,39,29,23,soleado
+2025-09-23,Martes,121,83,50,67,31,22,16,soleado_nublado
+2025-09-24,Miércoles,149,103,61,79,41,29,23,lluvioso
+2025-09-25,Jueves,164,115,67,86,40,29,22,soleado_lluvioso
+2025-09-26,Viernes,144,98,72,98,45,31,19,soleado
+2025-09-27,Sábado,174,132,96,112,55,38,28,nublado_lluvioso
+2025-09-28,Domingo,101,70,38,55,22,17,12,soleado_nublado_lluvioso
+2025-09-29,Lunes,112,79,46,65,28,19,15,soleado
+2025-09-30,Martes,129,88,52,72,34,24,19,nublado_lluvioso
+2025-10-01,Miércoles,157,111,66,87,44,31,25,soleado_lluvioso
+2025-10-02,Jueves,173,127,90,105,57,40,31,soleado_nublado
+2025-10-03,Viernes,160,119,70,94,50,33,24,soleado
+2025-10-04,Sábado,189,147,112,121,63,45,35,nublado
+2025-10-05,Domingo,114,89,56,71,32,25,19,soleado_nublado
+2025-10-06,Lunes,121,84,49,64,31,19,15,lluvioso
+2025-10-07,Martes,140,94,55,76,39,26,20,soleado_lluvioso
+2025-10-08,Miércoles,163,119,85,96,51,36,29,soleado
+2025-10-09,Jueves,186,132,88,107,51,37,31,nublado_lluvioso
+2025-10-10,Viernes,169,129,92,106,58,38,28,soleado
+2025-10-11,Sábado,208,157,117,141,73,50,40,nublado_lluvioso
+2025-10-12,Domingo,125,92,58,76,37,27,22,soleado
+2025-10-13,Lunes,128,89,53,70,35,24,19,nublado_lluvioso
+2025-10-14,Martes,153,111,65,87,43,31,25,soleado
+2025-10-15,Miércoles,173,127,92,105,57,40,31,nublado_lluvioso
+2025-10-16,Jueves,160,119,70,94,50,33,24,soleado
+2025-10-17,Viernes,168,121,89,104,58,42,33,nublado_lluvioso
+2025-10-18,Sábado,195,148,121,144,84,58,50,soleado
+2025-10-19,Domingo,116,90,58,75,34,26,22,nublado_lluvioso
+2025-10-20,Lunes,139,96,63,77,40,30,24,soleado
+2025-10-21,Martes,124,86,52,70,32,23,17,soleado_nublado
+2025-10-22,Miércoles,152,106,63,82,42,30,24,lluvioso
+2025-10-23,Jueves,167,118,69,89,41,30,23,soleado_lluvioso
+2025-10-24,Viernes,147,101,75,101,46,32,20,soleado
+2025-10-25,Sábado,177,135,99,115,56,39,29,nublado_lluvioso
+2025-10-26,Domingo,104,73,40,58,23,18,13,soleado_nublado_lluvioso
+2025-10-27,Lunes,115,82,48,68,29,20,16,soleado
+2025-10-28,Martes,132,91,54,75,35,25,20,nublado_lluvioso
+2025-10-29,Miércoles,160,114,68,90,45,32,26,soleado_lluvioso
+2025-10-30,Jueves,176,130,93,108,58,41,32,soleado_nublado
+2025-10-31,Viernes,163,122,73,97,51,34,25,soleado
+2025-11-01,Sábado,192,150,115,124,64,46,36,nublado
+2025-11-02,Domingo,117,92,59,74,33,26,20,soleado_nublado
+2025-11-03,Lunes,124,87,51,67,32,20,16,lluvioso
+2025-11-04,Martes,143,97,57,78,40,27,21,soleado_lluvioso
+2025-11-05,Miércoles,166,122,87,99,52,37,30,soleado
+2025-11-06,Jueves,189,135,90,110,52,38,32,nublado_lluvioso
+2025-11-07,Viernes,172,132,95,109,59,39,29,soleado
+2025-11-08,Sábado,211,160,120,144,74,51,41,nublado_lluvioso
+2025-11-09,Domingo,128,95,61,79,38,28,23,soleado
+2025-11-10,Lunes,131,92,56,73,36,25,20,nublado_lluvioso
+2025-11-11,Martes,156,114,68,90,44,32,26,soleado
+2025-11-12,Miércoles,176,130,95,108,58,41,32,nublado_lluvioso
+2025-11-13,Jueves,163,122,73,97,51,34,25,soleado
+2025-11-14,Viernes,171,124,92,107,59,43,34,nublado_lluvioso
+2025-11-15,Sábado,198,151,124,147,85,59,51,soleado
+2025-11-16,Domingo,119,93,61,78,35,27,23,nublado_lluvioso
+2025-11-17,Lunes,142,99,66,80,41,31,25,soleado
+2025-11-18,Martes,127,89,55,73,33,24,18,soleado_nublado
+2025-11-19,Miércoles,155,109,66,85,43,31,25,lluvioso
+2025-11-20,Jueves,170,121,72,92,42,31,24,soleado_lluvioso
+2025-11-21,Viernes,150,104,78,104,47,33,21,soleado
+2025-11-22,Sábado,180,138,102,118,57,40,30,nublado_lluvioso
+2025-11-23,Domingo,107,76,43,61,24,19,14,soleado_nublado_lluvioso
+2025-11-24,Lunes,118,85,50,71,30,21,17,soleado
+2025-11-25,Martes,135,94,56,78,36,26,21,nublado_lluvioso
+2025-11-26,Miércoles,163,117,70,93,46,33,27,soleado_lluvioso
+2025-11-27,Jueves,179,133,98,111,59,42,33,soleado_nublado
+2025-11-28,Viernes,166,125,75,100,52,35,26,soleado
+2025-11-29,Sábado,195,153,118,127,65,47,37,nublado
+2025-11-30,Domingo,120,95,62,77,34,27,21,soleado_nublado
+2025-12-01,Lunes,127,90,54,70,33,21,17,lluvioso
+2025-12-02,Martes,146,100,60,81,41,28,22,soleado_lluvioso
+2025-12-03,Miércoles,169,125,90,102,53,38,31,soleado
+2025-12-04,Jueves,192,138,93,113,54,39,33,nublado_lluvioso
+2025-12-05,Viernes,175,135,98,112,60,40,30,soleado
+2025-12-06,Sábado,214,163,123,147,75,52,42,nublado_lluvioso
+2025-12-07,Domingo,131,98,64,82,39,29,24,soleado
+2025-12-08,Lunes,134,95,59,76,37,26,21,nublado_lluvioso
+2025-12-09,Martes,159,117,71,93,45,33,27,soleado
+2025-12-10,Miércoles,179,133,98,111,59,42,33,nublado_lluvioso
+2025-12-11,Jueves,166,125,75,100,52,35,26,soleado
+2025-12-12,Viernes,174,127,95,110,60,44,35,nublado_lluvioso
+2025-12-13,Sábado,201,154,127,150,86,60,52,soleado
+2025-12-14,Domingo,122,96,64,81,36,28,24,nublado_lluvioso
+2025-12-15,Lunes,145,102,69,83,42,32,26,soleado
+2025-12-16,Martes,130,92,58,76,34,25,19,soleado_nublado
+2025-12-17,Miércoles,158,112,69,88,44,32,26,lluvioso
+2025-12-18,Jueves,173,124,75,95,43,32,25,soleado_lluvioso
+2025-12-19,Viernes,153,107,81,107,48,34,22,soleado
+2025-12-20,Sábado,183,141,105,121,58,41,31,nublado_lluvioso
+2025-12-21,Domingo,110,79,46,64,25,20,15,soleado_nublado_lluvioso
+2025-12-22,Lunes,121,88,53,74,31,22,18,soleado
+2025-12-23,Martes,138,97,59,81,37,27,22,nublado_lluvioso
+2025-12-24,Miércoles,166,120,73,96,47,34,28,soleado_lluvioso
+2025-12-25,Jueves,182,136,101,114,60,43,34,soleado_nublado
+2025-12-26,Viernes,169,128,78,103,53,36,27,soleado
+2025-12-27,Sábado,198,156,121,130,66,48,38,nublado
+2025-12-28,Domingo,123,98,65,80,35,28,22,soleado_nublado
+2025-12-29,Lunes,130,93,57,73,34,22,18,lluvioso
+2025-12-30,Martes,149,103,63,84,42,29,23,soleado_lluvioso
+2025-12-31,Miércoles,172,128,93,105,54,39,32,soleado
+2026-01-01,Jueves,195,141,96,116,55,40,34,nublado_lluvioso
+2026-01-02,Viernes,178,138,101,115,61,41,31,soleado
+2026-01-03,Sábado,217,166,126,150,76,53,43,nublado_lluvioso
+2026-01-04,Domingo,134,101,67,85,40,30,25,soleado
+2026-01-05,Lunes,137,98,62,79,38,27,22,nublado_lluvioso
+2026-01-06,Martes,162,120,74,96,46,34,28,soleado
+2026-01-07,Miércoles,182,136,101,114,60,43,34,nublado_lluvioso
+2026-01-08,Jueves,169,128,78,103,53,36,27,soleado
+2026-01-09,Viernes,177,130,98,113,61,45,36,nublado_lluvioso
+2026-01-10,Sábado,204,157,130,153,87,61,53,soleado
+2026-01-11,Domingo,125,99,67,84,37,29,25,nublado_lluvioso
+2026-01-12,Lunes,148,105,72,86,43,33,27,soleado
+2026-01-13,Martes,133,95,61,79,35,26,20,soleado_nublado
+2026-01-14,Miércoles,161,115,72,91,45,33,27,lluvioso
+2026-01-15,Jueves,176,127,78,98,44,33,26,soleado_lluvioso
+2026-01-16,Viernes,156,110,84,110,49,35,23,soleado
+2026-01-17,Sábado,186,144,108,124,59,42,32,nublado_lluvioso
+2026-01-18,Domingo,113,82,49,67,26,21,16,soleado_nublado_lluvioso
+2026-01-19,Lunes,124,91,56,77,32,23,19,soleado
+2026-01-20,Martes,141,100,62,84,38,28,23,nublado_lluvioso
+2026-01-21,Miércoles,169,123,76,99,48,35,29,soleado_lluvioso
+2026-01-22,Jueves,185,139,104,117,61,44,35,soleado_nublado
+2026-01-23,Viernes,172,131,81,106,54,37,28,soleado
+2026-01-24,Sábado,201,159,124,133,67,49,39,nublado
+2026-01-25,Domingo,126,101,68,83,36,29,23,soleado_nublado
+2026-01-26,Lunes,133,96,60,76,35,24,19,lluvioso
+2026-01-27,Martes,152,106,66,87,43,30,24,soleado_lluvioso
+2026-01-28,Miércoles,175,131,96,108,55,40,33,soleado
+2026-01-29,Jueves,198,144,99,119,56,41,35,nublado_lluvioso
+2026-01-30,Viernes,181,141,104,118,62,42,32,soleado
+2026-01-31,Sábado,220,169,129,153,77,54,44,nublado_lluvioso
+2026-02-01,Domingo,137,104,70,88,41,31,26,soleado
+2026-02-02,Lunes,140,101,65,82,39,28,23,nublado_lluvioso
+2026-02-03,Martes,165,123,77,99,47,35,29,soleado
+2026-02-04,Miércoles,185,139,104,117,61,44,35,nublado_lluvioso
+2026-02-05,Jueves,172,131,81,106,54,37,28,soleado
+2026-02-06,Viernes,180,133,101,116,62,46,37,nublado_lluvioso
+2026-02-07,Sábado,207,160,133,156,88,62,54,soleado
+2026-02-08,Domingo,128,102,70,87,38,30,26,nublado_lluvioso
+2026-02-09,Lunes,151,108,75,89,44,34,28,soleado
+2026-02-10,Martes,136,98,64,82,36,27,21,soleado_nublado
+2026-02-11,Miércoles,164,118,75,94,46,34,28,lluvioso
+2026-02-12,Jueves,179,130,81,101,45,34,27,soleado_lluvioso
+2026-02-13,Viernes,159,113,87,113,50,36,24,soleado
+2026-02-14,Sábado,189,147,111,127,60,43,33,nublado_lluvioso
+2026-02-15,Domingo,116,85,52,70,27,22,17,soleado_nublado_lluvioso
+2026-02-16,Lunes,127,94,59,80,33,24,20,soleado
+2026-02-17,Martes,144,103,65,87,39,29,24,nublado_lluvioso
+2026-02-18,Miércoles,172,126,79,102,49,36,30,soleado_lluvioso
+2026-02-19,Jueves,188,142,107,120,62,45,36,soleado_nublado
+2026-02-20,Viernes,175,134,84,109,55,38,29,soleado
+2026-02-21,Sábado,204,162,127,136,68,50,40,nublado
+2026-02-22,Domingo,130,104,71,86,37,30,24,soleado_nublado
+2026-02-23,Lunes,137,99,63,79,36,25,20,lluvioso
+2026-02-24,Martes,156,109,69,90,44,31,25,soleado_lluvioso
+2026-02-25,Miércoles,179,134,99,111,56,41,34,soleado
+2026-02-26,Jueves,202,147,102,122,57,42,36,nublado_lluvioso
+2026-02-27,Viernes,185,144,107,121,63,43,33,soleado
+2026-02-28,Sábado,223,172,132,156,78,55,45,nublado_lluvioso
+2026-03-01,Domingo,140,107,73,91,42,32,27,soleado
+2026-03-02,Lunes,143,104,68,85,40,29,24,nublado_lluvioso
+2026-03-03,Martes,168,126,80,102,48,36,30,soleado
+2026-03-04,Miércoles,188,142,107,120,62,45,36,nublado_lluvioso
+2026-03-05,Jueves,175,134,84,109,55,38,29,soleado
+2026-03-06,Viernes,183,136,104,119,63,47,38,nublado_lluvioso
+2026-03-07,Sábado,210,163,136,159,89,63,55,soleado
+2026-03-08,Domingo,131,105,73,90,39,31,27,nublado_lluvioso
+2026-03-09,Lunes,154,111,78,92,45,35,29,soleado
+2026-03-10,Martes,139,101,67,85,37,28,22,soleado_nublado
+2026-03-11,Miércoles,167,121,78,97,47,35,29,lluvioso
+2026-03-12,Jueves,182,133,84,104,46,35,28,soleado_lluvioso
+2026-03-13,Viernes,162,116,90,116,51,37,25,soleado
+2026-03-14,Sábado,192,150,114,130,61,44,34,nublado_lluvioso
+2026-03-15,Domingo,119,88,55,73,28,23,18,soleado_nublado_lluvioso
+2026-03-16,Lunes,130,97,62,83,34,25,21,soleado
+2026-03-17,Martes,147,106,68,90,40,30,25,nublado_lluvioso
+2026-03-18,Miércoles,175,129,82,105,50,37,31,soleado_lluvioso
+2026-03-19,Jueves,191,145,110,123,63,46,37,soleado_nublado
+2026-03-20,Viernes,178,137,87,112,56,39,30,soleado
+2026-03-21,Sábado,207,165,130,139,69,51,41,nublado
+2026-03-22,Domingo,133,107,74,89,38,30,25,soleado_nublado
+2026-03-23,Lunes,140,102,66,82,37,26,21,lluvioso
+2026-03-24,Martes,159,112,72,93,45,32,26,soleado_lluvioso
+2026-03-25,Miércoles,182,137,102,114,57,42,35,soleado
+2026-03-26,Jueves,205,150,105,125,58,43,37,nublado_lluvioso
+2026-03-27,Viernes,188,147,110,124,64,44,34,soleado
+2026-03-28,Sábado,226,175,135,159,79,56,46,nublado_lluvioso
+2026-03-29,Domingo,143,110,76,94,43,33,28,soleado
+2026-03-30,Lunes,146,107,71,88,41,30,25,nublado_lluvioso
+2026-03-31,Martes,171,129,83,105,49,37,31,soleado
+2026-04-01,Miércoles,191,145,110,123,63,46,37,nublado_lluvioso
+2026-04-02,Jueves,178,137,87,112,56,39,30,soleado
+2026-04-03,Viernes,186,139,107,122,64,48,39,nublado_lluvioso
+2026-04-04,Sábado,213,166,139,162,90,64,56,soleado
+2026-04-05,Domingo,134,108,76,93,40,32,28,nublado_lluvioso
+2026-04-06,Lunes,157,114,81,95,46,36,30,soleado
+2026-04-07,Martes,142,104,70,88,38,29,23,soleado_nublado
+2026-04-08,Miércoles,170,124,81,100,48,36,30,lluvioso
+2026-04-09,Jueves,185,136,87,107,47,36,29,soleado_lluvioso
+2026-04-10,Viernes,165,119,93,119,52,38,26,soleado
+2026-04-11,Sábado,195,153,117,133,62,45,35,nublado_lluvioso
+2026-04-12,Domingo,122,91,58,76,29,24,19,soleado_nublado_lluvioso
+2026-04-13,Lunes,133,100,65,86,35,26,22,soleado
+2026-04-14,Martes,150,109,71,93,41,31,26,nublado_lluvioso
+2026-04-15,Miércoles,178,132,85,108,51,38,32,soleado_lluvioso
+2026-04-16,Jueves,194,148,113,126,64,47,38,soleado_nublado
+2026-04-17,Viernes,181,140,90,115,57,40,31,soleado
+2025-04-18,Sábado,210,168,133,142,70,52,42,nublado
+2025-04-19,Domingo,136,110,77,92,39,31,26,soleado_nublado
+2025-04-20,Lunes,143,105,69,85,38,27,22,lluvioso
+2025-04-21,Martes,162,115,75,96,46,33,27,soleado_lluvioso
+2025-04-22,Miércoles,185,140,105,117,58,43,36,soleado
+2025-04-23,Jueves,208,153,108,128,59,44,38,nublado_lluvioso
+2025-04-24,Viernes,191,150,113,127,65,45,35,soleado
+2025-04-25,Sábado,229,178,138,162,80,57,47,nublado_lluvioso
+2025-04-26,Domingo,146,113,79,97,44,34,29,soleado
+2025-04-27,Lunes,149,110,74,91,42,31,26,nublado_lluvioso
+2025-04-28,Martes,174,132,86,108,50,38,32,soleado
+2025-04-29,Miércoles,194,148,113,126,64,47,38,nublado_lluvioso
+2025-04-30,Jueves,181,140,90,115,57,40,31,soleado
+2025-05-01,Viernes,189,142,110,125,65,49,40,nublado_lluvioso
+2025-05-02,Sábado,216,169,142,165,91,65,57,soleado
+2025-05-03,Domingo,137,111,79,96,41,33,29,nublado_lluvioso
+2025-05-04,Lunes,160,117,84,98,47,37,31,soleado
+2025-05-05,Martes,145,107,73,91,39,30,24,soleado_nublado
+2025-05-06,Miércoles,173,127,84,103,49,37,31,lluvioso
+2025-05-07,Jueves,188,139,90,110,48,37,30,soleado_lluvioso
+2025-05-08,Viernes,168,122,96,122,53,39,27,soleado
+2025-05-09,Sábado,198,156,120,136,63,46,36,nublado_lluvioso
+2025-05-10,Domingo,125,94,61,79,30,25,20,soleado_nublado_lluvioso
+2025-05-11,Lunes,136,103,68,89,36,27,23,soleado
+2025-05-12,Martes,153,112,74,96,42,32,27,nublado_lluvioso
+2025-05-13,Miércoles,181,135,88,111,52,39,33,soleado_lluvioso
+2025-05-14,Jueves,197,151,116,129,65,48,39,soleado_nublado
+2025-05-15,Viernes,184,143,93,118,58,41,32,soleado
+2025-05-16,Sábado,213,171,136,145,71,53,43,nublado
+2025-05-17,Domingo,139,113,80,95,40,32,27,soleado_nublado
+2025-05-18,Lunes,146,108,72,88,39,28,23,lluvioso
+2025-05-19,Martes,165,118,78,99,47,34,28,soleado_lluvioso
+2025-05-20,Miércoles,188,143,108,120,59,44,37,soleado
+2025-05-21,Jueves,211,156,111,131,60,45,39,nublado_lluvioso
+2025-05-22,Viernes,194,153,116,130,66,46,36,soleado
+2025-05-23,Sábado,232,181,141,165,81,58,48,nublado_lluvioso
+2025-05-24,Domingo,149,116,82,100,45,35,30,soleado
+2025-05-25,Lunes,152,113,77,94,43,32,27,nublado_lluvioso
+2025-05-26,Martes,177,135,89,111,51,39,33,soleado
+2025-05-27,Miércoles,197,151,116,129,65,48,39,nublado_lluvioso
+2025-05-28,Jueves,184,143,93,118,58,41,32,soleado
+2025-05-29,Viernes,192,145,113,128,66,50,41,nublado_lluvioso
+2025-05-30,Sábado,219,172,145,168,92,66,58,soleado
+2025-05-31,Domingo,140,114,82,99,42,34,30,nublado_lluvioso
+2025-06-01,Lunes,163,120,87,101,48,38,32,soleado
+2025-06-02,Martes,148,110,76,94,40,31,25,soleado_nublado
+2025-06-03,Miércoles,176,130,87,106,50,38,32,lluvioso
+2025-06-04,Jueves,191,142,93,113,49,38,31,soleado_lluvioso
+2025-06-05,Viernes,171,125,99,125,54,40,28,soleado
+2025-06-06,Sábado,201,159,123,139,64,47,37,nublado_lluvioso
+2025-06-07,Domingo,128,97,64,82,31,26,21,soleado_nublado_lluvioso
+2025-06-08,Lunes,139,106,71,92,37,28,24,soleado
+2025-06-09,Martes,156,115,77,99,43,33,28,nublado_lluvioso
+2025-06-10,Miércoles,184,138,91,114,53,40,34,soleado_lluvioso
+2025-06-11,Jueves,200,154,119,132,66,49,40,soleado_nublado
+2025-06-12,Viernes,187,146,96,121,59,42,33,soleado
+2025-06-13,Sábado,216,174,139,148,72,54,44,nublado
+2025-06-14,Domingo,142,116,83,98,41,33,28,soleado_nublado
+2025-06-15,Lunes,149,111,75,91,40,29,24,lluvioso
+2025-06-16,Martes,168,121,81,102,48,35,29,soleado_lluvioso
+2025-06-17,Miércoles,191,146,111,123,60,45,38,soleado
+2025-06-18,Jueves,214,159,114,134,61,46,40,nublado_lluvioso
+2025-06-19,Viernes,197,156,119,133,67,47,37,soleado
+2025-06-20,Sábado,235,184,144,168,82,59,49,nublado_lluvioso
+2025-06-21,Domingo,152,119,85,103,46,36,31,soleado
+2025-06-22,Lunes,155,116,80,97,44,33,28,nublado_lluvioso
+2025-06-23,Martes,180,138,92,114,52,40,34,soleado
+2025-06-24,Miércoles,200,154,119,132,66,49,40,nublado_lluvioso
+2025-06-25,Jueves,187,146,96,121,59,42,33,soleado
+2025-06-26,Viernes,195,148,116,131,68,51,42,nublado_lluvioso
+2025-06-27,Sábado,222,175,148,171,93,67,59,soleado
+2025-06-28,Domingo,143,117,85,102,43,35,30,nublado_lluvioso
+2025-06-29,Lunes,166,123,90,105,49,39,33,soleado
+2025-06-30,Martes,151,113,79,97,41,32,26,soleado_nublado
+2025-07-01,Miércoles,179,133,90,112,51,39,33,lluvioso
+2025-07-02,Jueves,194,145,96,119,50,39,32,soleado_lluvioso
+2025-07-03,Viernes,174,128,102,128,55,41,29,soleado
+2025-07-04,Sábado,204,162,126,142,65,48,38,nublado_lluvioso
+2025-07-05,Domingo,131,100,67,85,32,27,22,soleado_nublado_lluvioso
+2025-07-06,Lunes,142,109,74,95,38,29,25,soleado
+2025-07-07,Martes,159,118,80,102,44,34,29,nublado_lluvioso
+2025-07-08,Miércoles,187,141,94,117,54,41,35,soleado_lluvioso
+2025-07-09,Jueves,203,157,122,135,67,50,41,soleado_nublado
+2025-07-10,Viernes,190,149,99,124,60,43,34,soleado
+2025-07-11,Sábado,219,177,142,151,73,55,45,nublado
+2025-07-12,Domingo,145,119,86,101,42,34,29,soleado_nublado
+2025-07-13,Lunes,152,114,78,94,41,30,25,lluvioso
+2025-07-14,Martes,171,124,84,105,49,36,30,soleado_lluvioso
+2025-07-15,Miércoles,194,149,114,126,61,46,39,soleado
+2025-07-16,Jueves,217,162,117,137,62,47,41,nublado_lluvioso
+2025-07-17,Viernes,200,159,122,136,68,48,38,soleado
+2025-07-18,Sábado,238,187,147,171,83,60,50,nublado_lluvioso
+2025-07-19,Domingo,155,122,88,106,47,37,32,soleado
+2025-07-20,Lunes,158,119,83,100,45,34,29,nublado_lluvioso
+2025-07-21,Martes,183,141,95,117,53,41,35,soleado
+2025-07-22,Miércoles,203,157,122,135,67,50,41,nublado_lluvioso
+2025-07-23,Jueves,190,149,99,124,60,43,34,soleado
+2025-07-24,Viernes,198,151,119,134,69,52,43,nublado_lluvioso
+2025-07-25,Sábado,225,178,151,174,94,68,60,soleado
+2025-07-26,Domingo,146,120,88,105,44,36,31,nublado_lluvioso
+2025-07-27,Lunes,169,126,93,108,50,40,34,soleado
+2025-07-28,Martes,154,116,82,100,42,33,27,soleado_nublado
+2025-07-29,Miércoles,182,136,93,115,52,39,33,lluvioso
+2025-07-30,Jueves,197,148,99,122,51,39,32,soleado_lluvioso
+2025-07-31,Viernes,177,131,105,131,56,42,30,soleado
+2025-08-01,Sábado,207,165,129,145,66,49,39,nublado_lluvioso
+2025-08-02,Domingo,134,103,70,88,33,28,23,soleado_nublado_lluvioso
+2025-08-03,Lunes,145,112,77,98,39,30,26,soleado
+2025-08-04,Martes,162,121,83,105,45,35,30,nublado_lluvioso
+2025-08-05,Miércoles,190,144,97,120,55,42,36,soleado_lluvioso
+2025-08-06,Jueves,206,160,125,138,68,51,42,soleado_nublado
+2025-08-07,Viernes,193,152,102,127,61,44,35,soleado
+2025-08-08,Sábado,222,180,145,154,74,56,46,nublado
+2025-08-09,Domingo,148,122,89,104,43,35,30,soleado_nublado
+2025-08-10,Lunes,155,117,81,97,42,31,26,lluvioso
+2025-08-11,Martes,174,127,87,108,50,37,31,soleado_lluvioso
+2025-08-12,Miércoles,197,152,117,129,62,47,40,soleado
+2025-08-13,Jueves,220,165,120,140,63,48,42,nublado_lluvioso
+2025-08-14,Viernes,203,162,125,139,69,49,39,soleado
+2025-08-15,Sábado,241,190,150,174,84,61,51,nublado_lluvioso
+2025-08-16,Domingo,158,125,91,109,48,38,33,soleado
+2025-08-17,Lunes,161,122,86,103,46,35,30,nublado_lluvioso
+2025-08-18,Martes,186,144,98,120,54,42,36,soleado
+2025-08-19,Miércoles,206,160,125,138,68,51,42,nublado_lluvioso
+2025-08-20,Jueves,193,152,102,127,61,44,35,soleado
+2025-08-21,Viernes,201,154,122,137,70,53,44,nublado_lluvioso
+2025-08-22,Sábado,228,181,154,177,95,69,61,soleado
+2025-08-23,Domingo,149,123,91,108,45,37,32,nublado_lluvioso
+2025-08-24,Lunes,172,129,96,111,51,41,35,soleado
+2025-08-25,Martes,157,119,85,103,43,34,28,soleado_nublado
+2025-08-26,Miércoles,185,139,96,118,53,41,35,lluvioso
+2025-08-27,Jueves,200,151,102,125,52,41,34,soleado_lluvioso
+2025-08-28,Viernes,180,134,108,134,57,43,31,soleado
+2025-08-29,Sábado,210,168,132,148,67,50,40,nublado_lluvioso
+2025-08-30,Domingo,137,106,73,91,34,29,24,soleado_nublado_lluvioso
+2025-08-31,Lunes,148,115,80,101,40,31,27,soleado
+2025-09-01,Martes,165,124,86,108,46,36,31,nublado_lluvioso
+2025-09-02,Miércoles,193,147,100,123,56,43,37,soleado_lluvioso
+2025-09-03,Jueves,209,163,128,141,69,52,43,soleado_nublado
+2025-09-04,Viernes,196,155,105,130,62,45,36,soleado
+2025-09-05,Sábado,225,183,148,157,75,57,47,nublado
+2025-09-06,Domingo,151,125,92,107,44,36,31,soleado_nublado
+2025-09-07,Lunes,158,120,84,100,43,32,27,lluvioso
+2025-09-08,Martes,177,130,90,111,51,38,32,soleado_lluvioso
+2025-09-09,Miércoles,200,155,120,132,63,48,41,soleado
+2025-09-10,Jueves,223,168,123,143,64,49,43,nublado_lluvioso
+2025-09-11,Viernes,206,165,128,142,70,50,40,soleado
+2025-09-12,Sábado,244,193,153,177,85,62,52,nublado_lluvioso
+2025-09-13,Domingo,161,128,94,112,49,39,34,soleado
+2025-09-14,Lunes,164,125,89,106,47,36,31,nublado_lluvioso
+2025-09-15,Martes,189,147,101,123,55,43,37,soleado
+2025-09-16,Miércoles,209,163,128,141,69,52,43,nublado_lluvioso
+2025-09-17,Jueves,196,155,105,130,62,45,36,soleado
+2025-09-18,Viernes,204,157,125,140,71,54,45,nublado_lluvioso
+2025-09-19,Sábado,231,184,157,180,96,70,62,soleado
+2025-09-20,Domingo,152,126,94,115,46,38,33,nublado_lluvioso
+2025-09-21,Lunes,175,132,99,118,52,42,36,soleado
+2025-09-22,Martes,160,122,88,106,44,35,29,soleado_nublado
+2025-09-23,Miércoles,188,142,99,121,54,42,36,lluvioso
+2025-09-24,Jueves,203,154,105,128,53,42,35,soleado_lluvioso
+2025-09-25,Viernes,183,137,111,137,58,44,32,soleado
+2025-09-26,Sábado,213,171,135,151,68,51,41,nublado_lluvioso
+2025-09-27,Domingo,140,109,76,94,35,30,25,soleado_nublado_lluvioso
+2025-09-28,Lunes,151,118,83,104,41,32,28,soleado
+2025-09-29,Martes,168,127,89,111,47,37,32,nublado_lluvioso
+2025-09-30,Miércoles,196,150,103,126,57,44,38,soleado_lluvioso
+2025-10-01,Jueves,212,166,131,144,70,53,44,soleado_nublado
+2025-10-02,Viernes,199,158,108,133,63,46,37,soleado
+2025-10-03,Sábado,228,186,151,160,76,58,48,nublado
+2025-10-04,Domingo,154,129,95,110,45,37,32,soleado_nublado
+2025-10-05,Lunes,161,124,87,103,46,33,28,lluvioso
+2025-10-06,Martes,180,134,93,114,54,40,33,soleado_lluvioso
+2025-10-07,Miércoles,203,159,123,135,65,49,42,soleado
+2025-10-08,Jueves,226,172,126,146,66,50,44,nublado_lluvioso
+2025-10-09,Viernes,209,169,131,145,72,51,41,soleado
+2025-10-10,Sábado,247,196,156,180,87,63,53,nublado_lluvioso
+2025-10-11,Domingo,164,131,97,115,50,40,35,soleado
+2025-10-12,Lunes,167,128,92,109,48,37,32,nublado_lluvioso
+2025-10-13,Martes,192,150,104,126,56,44,38,soleado
+2025-10-14,Miércoles,212,166,131,144,70,53,44,nublado_lluvioso
+2025-10-15,Jueves,199,158,108,133,63,46,37,soleado
+2025-10-16,Viernes,207,160,128,143,73,55,46,nublado_lluvioso
+2025-10-17,Sábado,234,187,160,183,97,71,63,soleado
+2025-10-18,Domingo,155,129,97,118,47,39,34,nublado_lluvioso
+2025-10-19,Lunes,178,135,102,121,53,43,37,soleado
+2025-10-20,Martes,163,125,91,109,45,36,30,soleado_nublado
+2025-10-21,Miércoles,191,145,102,124,55,43,37,lluvioso
+2025-10-22,Jueves,206,157,108,131,54,43,36,soleado_lluvioso
+2025-10-23,Viernes,186,140,114,140,59,45,33,soleado
+2025-10-24,Sábado,216,174,138,154,69,52,42,nublado_lluvioso
+2025-10-25,Domingo,143,112,79,97,36,31,26,soleado_nublado_lluvioso
+2025-10-26,Lunes,154,121,86,107,42,33,29,soleado
+2025-10-27,Martes,171,130,92,114,48,38,33,nublado_lluvioso
+2025-10-28,Miércoles,199,153,106,129,58,45,39,soleado_lluvioso
+2025-10-29,Jueves,215,169,134,147,71,54,45,soleado_nublado
+2025-10-30,Viernes,202,161,111,136,64,47,38,soleado
+2025-10-31,Sábado,231,189,154,163,77,59,49,nublado
+2025-11-01,Domingo,157,132,98,113,46,38,33,soleado_nublado
+2025-11-02,Lunes,164,127,90,106,47,34,29,lluvioso
+2025-11-03,Martes,183,137,96,117,55,41,34,soleado_lluvioso
+2025-11-04,Miércoles,206,162,126,138,66,50,43,soleado
+2025-11-05,Jueves,229,175,129,149,67,51,45,nublado_lluvioso
+2025-11-06,Viernes,212,172,134,148,73,52,42,soleado
+2025-11-07,Sábado,250,200,163,186,88,64,54,nublado_lluvioso
+2025-11-08,Domingo,167,134,100,118,51,41,36,soleado
+2025-11-09,Lunes,170,131,95,112,49,38,33,nublado_lluvioso
+2025-11-10,Martes,195,153,107,129,57,45,39,soleado
+2025-11-11,Miércoles,215,169,134,147,71,54,45,nublado_lluvioso
+2025-11-12,Jueves,202,161,111,136,64,47,38,soleado
+2025-11-13,Viernes,210,163,131,146,74,56,47,nublado_lluvioso
+2025-11-14,Sábado,237,190,163,183,98,72,64,soleado
+2025-11-15,Domingo,158,134,100,121,48,40,35,nublado_lluvioso
+2025-11-16,Lunes,181,140,105,124,54,44,38,soleado
+2025-11-17,Martes,166,128,94,112,46,37,31,soleado_nublado
+2025-11-18,Miércoles,194,148,105,127,56,44,38,lluvioso
+2025-11-19,Jueves,209,160,111,134,55,44,37,soleado_lluvioso
+2025-11-20,Viernes,189,143,117,143,60,46,34,soleado
+2025-11-21,Sábado,219,177,141,157,70,53,43,nublado_lluvioso
+2025-11-22,Domingo,146,115,82,100,37,32,27,soleado_nublado_lluvioso
+2025-11-23,Lunes,157,124,89,110,43,34,30,soleado
+2025-11-24,Martes,174,133,95,117,49,39,34,nublado_lluvioso
+2025-11-25,Miércoles,202,156,109,132,59,46,40,soleado_lluvioso
+2025-11-26,Jueves,218,172,137,150,72,55,46,soleado_nublado
+2025-11-27,Viernes,205,164,114,139,65,48,39,soleado
+2025-11-28,Sábado,234,192,157,166,78,60,50,nublado
+2025-11-29,Domingo,160,136,101,116,49,39,34,soleado_nublado
+2025-11-30,Lunes,167,131,93,109,48,35,30,lluvioso
+2025-12-01,Martes,186,141,99,120,56,42,35,soleado_lluvioso
+2025-12-02,Miércoles,209,166,129,141,67,51,44,soleado
+2025-12-03,Jueves,232,179,132,152,68,52,46,nublado_lluvioso
+2025-12-04,Viernes,215,176,137,151,74,53,43,soleado
+2025-12-05,Sábado,253,204,166,189,89,65,55,nublado_lluvioso
+2025-12-06,Domingo,170,139,103,121,52,42,37,soleado
+2025-12-07,Lunes,173,136,98,115,50,39,34,nublado_lluvioso
+2025-12-08,Martes,198,158,110,132,58,46,40,soleado
+2025-12-09,Miércoles,218,174,137,150,72,55,46,nublado_lluvioso
+2025-12-10,Jueves,205,166,114,139,65,48,39,soleado
+2025-12-11,Viernes,213,168,134,149,75,57,48,nublado_lluvioso
+2025-12-12,Sábado,240,195,166,186,100,74,65,soleado
+2025-12-13,Domingo,161,139,104,119,50,41,36,nublado_lluvioso
+2025-12-14,Lunes,184,145,109,122,56,45,39,soleado
+2025-12-15,Martes,169,134,98,116,48,38,32,soleado_nublado
+2025-12-16,Miércoles,197,154,109,131,58,45,39,lluvioso
+2025-12-17,Jueves,212,166,115,138,57,45,38,soleado_lluvioso
+2025-12-18,Viernes,192,149,121,146,62,47,35,soleado
+2025-12-19,Sábado,222,183,145,160,72,54,44,nublado_lluvioso
+2025-12-20,Domingo,149,117,85,103,39,34,29,soleado_nublado_lluvioso
+2025-12-21,Lunes,160,126,92,113,45,35,31,soleado
+2025-12-22,Martes,177,135,98,120,51,40,35,nublado_lluvioso
+2025-12-23,Miércoles,205,158,112,135,61,47,41,soleado_lluvioso
+2025-12-24,Jueves,221,174,140,153,73,56,47,soleado_nublado
+2025-12-25,Viernes,208,166,117,142,66,49,40,soleado
+2025-12-26,Sábado,237,195,160,169,79,61,51,nublado
+2025-12-27,Domingo,163,139,104,119,49,41,36,soleado_nublado
+2025-12-28,Lunes,170,134,96,112,48,38,33,lluvioso
+2025-12-29,Martes,189,144,102,123,56,43,37,soleado_lluvioso
+2025-12-30,Miércoles,212,169,132,144,67,51,44,soleado
+2025-12-31,Jueves,235,182,135,155,68,52,46,nublado_lluvioso
+2026-01-01,Viernes,218,179,140,154,74,53,43,soleado
+2026-01-02,Sábado,256,207,169,192,89,65,55,nublado_lluvioso
+2026-01-03,Domingo,173,142,107,124,52,42,37,soleado
+2026-01-04,Lunes,176,139,102,118,50,39,34,nublado_lluvioso
+2026-01-05,Martes,201,161,114,135,58,46,40,soleado
+2026-01-06,Miércoles,221,177,140,153,72,55,46,nublado_lluvioso
+2026-01-07,Jueves,208,169,117,142,65,48,39,soleado
+2026-01-08,Viernes,216,171,137,152,75,57,48,nublado_lluvioso
+2026-01-09,Sábado,243,198,169,189,101,75,66,soleado
+2026-01-10,Domingo,164,142,107,122,51,42,37,nublado_lluvioso
+2026-01-11,Lunes,187,148,112,125,57,46,40,soleado
+2026-01-12,Martes,172,137,101,119,49,39,33,soleado_nublado
+2026-01-13,Miércoles,200,157,112,134,59,46,40,lluvioso
+2026-01-14,Jueves,215,169,118,141,58,46,39,soleado_lluvioso
+2026-01-15,Viernes,195,152,124,149,63,48,36,soleado
+2026-01-16,Sábado,225,186,148,163,73,55,45,nublado_lluvioso
+2026-01-17,Domingo,152,120,88,106,39,35,30,soleado_nublado_lluvioso
+2026-01-18,Lunes,163,129,95,116,45,36,32,soleado
+2026-01-19,Martes,180,138,101,123,51,41,36,nublado_lluvioso
+2026-01-20,Miércoles,208,161,115,138,61,48,42,soleado_lluvioso
+2026-01-21,Jueves,224,177,143,156,74,57,48,soleado_nublado
+2026-01-22,Viernes,211,169,120,145,67,50,41,soleado
+2026-01-23,Sábado,240,198,163,172,80,62,52,nublado
+2026-01-24,Domingo,166,142,109,124,50,42,37,soleado_nublado
+2026-01-25,Lunes,173,137,101,117,49,39,34,lluvioso
+2026-01-26,Martes,192,147,107,128,57,46,40,soleado_lluvioso
+2026-01-27,Miércoles,215,172,137,149,68,52,45,soleado
+2026-01-28,Jueves,238,185,140,160,69,53,47,nublado_lluvioso
+2026-01-29,Viernes,221,182,145,159,75,54,44,soleado
+2026-01-30,Sábado,259,210,172,195,90,66,56,nublado_lluvioso
+2026-01-31,Domingo,176,145,110,127,53,43,38,soleado
+2026-02-01,Lunes,179,142,105,121,51,40,35,nublado_lluvioso
+2026-02-02,Martes,204,164,117,138,59,47,41,soleado
+2026-02-03,Miércoles,224,180,143,156,74,57,48,nublado_lluvioso
+2026-02-04,Jueves,211,172,120,145,67,50,41,soleado
+2026-02-05,Viernes,219,174,140,155,77,58,49,nublado_lluvioso
+2026-02-06,Sábado,246,201,172,192,102,76,67,soleado
+2026-02-07,Domingo,167,146,110,126,52,44,39,nublado_lluvioso
+2026-02-08,Lunes,190,152,115,129,58,47,41,soleado
+2026-02-09,Martes,175,141,104,122,50,40,34,soleado_nublado
+2026-02-10,Miércoles,203,161,115,137,60,47,41,lluvioso
+2026-02-11,Jueves,218,173,121,144,59,47,40,soleado_lluvioso
+2026-02-12,Viernes,198,156,127,152,64,49,37,soleado
+2026-02-13,Sábado,228,190,151,166,74,56,46,nublado_lluvioso
+2026-02-14,Domingo,155,123,91,109,38,35,30,soleado_nublado_lluvioso
+2026-02-15,Lunes,166,132,98,119,44,36,32,soleado
+2026-02-16,Martes,183,141,104,126,50,41,36,nublado_lluvioso
+2026-02-17,Miércoles,211,164,118,141,60,48,42,soleado_lluvioso
+2026-02-18,Jueves,227,180,146,159,73,57,49,soleado_nublado
+2026-02-19,Viernes,214,172,123,148,66,50,42,soleado
+2026-02-20,Sábado,243,201,166,175,80,62,52,nublado
+2026-02-21,Domingo,169,145,112,127,51,43,38,soleado_nublado
+2026-02-22,Lunes,176,140,104,120,50,40,35,lluvioso
+2026-02-23,Martes,195,150,110,131,58,47,41,soleado_lluvioso
+2026-02-24,Miércoles,218,175,140,152,69,53,46,soleado
+2026-02-25,Jueves,241,188,143,163,70,54,48,nublado_lluvioso
+2026-02-26,Viernes,224,185,148,162,76,55,45,soleado
+2026-02-27,Sábado,262,213,175,198,91,67,57,nublado_lluvioso
+2026-02-28,Domingo,179,148,113,130,54,44,39,soleado
+2026-03-01,Lunes,182,145,108,124,52,41,36,nublado_lluvioso
+2026-03-02,Martes,207,167,120,141,60,48,42,soleado
+2026-03-03,Miércoles,227,183,146,159,74,57,49,nublado_lluvioso
+2026-03-04,Jueves,214,175,123,148,67,50,42,soleado
+2026-03-05,Viernes,222,177,143,158,77,59,50,nublado_lluvioso
+2026-03-06,Sábado,249,204,175,195,102,77,68,soleado
+2026-03-07,Domingo,170,148,113,129,53,45,40,nublado_lluvioso
+2026-03-08,Lunes,193,154,118,132,59,48,42,soleado
+2026-03-09,Martes,178,143,107,125,51,41,35,soleado_nublado
+2026-03-10,Miércoles,206,164,118,140,61,48,42,lluvioso
+2026-03-11,Jueves,221,176,124,147,60,48,41,soleado_lluvioso
+2026-03-12,Viernes,201,159,130,155,65,50,38,soleado
+2026-03-13,Sábado,231,193,154,169,75,57,47,nublado_lluvioso
+2026-03-14,Domingo,158,126,94,112,39,36,31,soleado_nublado_lluvioso
+2026-03-15,Lunes,169,135,101,122,45,37,33,soleado
+2026-03-16,Martes,186,144,107,129,51,42,37,nublado_lluvioso
+2026-03-17,Miércoles,214,167,121,144,61,49,43,soleado_lluvioso
+2026-03-18,Jueves,230,183,149,162,74,58,50,soleado_nublado
+2026-03-19,Viernes,217,175,126,151,67,51,43,soleado
+2026-03-20,Sábado,246,204,169,178,81,63,53,nublado
+2026-03-21,Domingo,172,148,115,130,52,44,39,soleado_nublado
+2026-03-22,Lunes,179,143,107,123,51,41,36,lluvioso
+2026-03-23,Martes,198,153,113,134,59,47,41,soleado_lluvioso
+2026-03-24,Miércoles,221,178,143,155,70,54,47,soleado
+2026-03-25,Jueves,244,191,146,166,71,55,49,nublado_lluvioso
+2026-03-26,Viernes,227,188,151,165,77,56,46,soleado
+2026-03-27,Sábado,265,216,178,201,92,68,58,nublado_lluvioso
+2026-03-28,Domingo,182,151,116,133,55,45,40,soleado
+2026-03-29,Lunes,185,148,111,127,53,42,37,nublado_lluvioso
+2026-03-30,Martes,210,170,123,144,61,49,43,soleado
+2026-03-31,Miércoles,230,186,149,162,75,58,50,nublado_lluvioso
+2026-04-01,Jueves,217,178,126,151,68,51,43,soleado
+2026-04-02,Viernes,225,180,146,161,78,60,51,nublado_lluvioso
+2026-04-03,Sábado,252,207,178,198,103,78,69,soleado
+2026-04-04,Domingo,173,151,118,132,54,46,41,nublado_lluvioso
+2026-04-05,Lunes,196,157,123,135,60,49,43,soleado
+2026-04-06,Martes,181,146,112,129,52,42,36,soleado_nublado
+2026-04-07,Miércoles,209,167,123,144,62,49,43,lluvioso
+2026-04-08,Jueves,224,179,129,151,61,49,42,soleado_lluvioso
+2026-04-09,Viernes,204,162,135,158,66,51,39,soleado
+2026-04-10,Sábado,234,196,159,173,76,58,48,nublado_lluvioso
+2026-04-11,Domingo,161,129,97,115,40,36,31,soleado_nublado_lluvioso
+2026-04-12,Lunes,172,138,104,125,46,37,33,soleado
+2026-04-13,Martes,189,147,110,132,52,42,37,nublado_lluvioso
+2026-04-14,Miércoles,217,170,124,147,62,49,43,soleado_lluvioso
+2026-04-15,Jueves,233,186,152,165,75,58,50,soleado_nublado
+2026-04-16,Viernes,220,178,129,154,68,51,43,soleado
+2026-04-17,Sábado,249,207,172,181,81,63,53,nublado
+2026-04-18,Domingo,175,151,120,135,51,45,40,soleado_nublado
+2025-04-19,Lunes,182,146,112,128,50,42,37,lluvioso
+2025-04-20,Martes,201,156,118,139,58,47,41,soleado_lluvioso
+2025-04-21,Miércoles,224,181,147,160,69,54,47,soleado
+2025-04-22,Jueves,247,194,150,171,70,55,49,nublado_lluvioso
+2025-04-23,Viernes,230,191,155,170,76,56,46,soleado
+2025-04-24,Sábado,268,219,180,204,91,69,59,nublado_lluvioso
+2025-04-25,Domingo,185,154,122,138,56,46,41,soleado
+2025-04-26,Lunes,188,151,117,132,54,43,38,nublado_lluvioso
+2025-04-27,Martes,213,173,129,149,62,50,44,soleado
+2025-04-28,Miércoles,233,189,154,167,76,59,50,nublado_lluvioso
+2025-04-29,Jueves,220,181,132,156,69,52,43,soleado
+2025-04-30,Viernes,228,183,151,166,79,61,52,nublado_lluvioso
+2025-05-01,Sábado,255,210,183,202,104,79,70,soleado
+2025-05-02,Domingo,176,154,125,139,55,47,42,nublado_lluvioso
+2025-05-03,Lunes,199,160,130,142,61,50,44,soleado
+2025-05-04,Martes,184,149,118,135,53,43,37,soleado_nublado
+2025-05-05,Miércoles,212,169,129,150,63,50,44,lluvioso
+2025-05-06,Jueves,227,181,135,157,62,50,43,soleado_lluvioso
+2025-05-07,Viernes,207,164,141,163,67,52,40,soleado
+2025-05-08,Sábado,237,198,162,177,77,59,49,nublado_lluvioso
+2025-05-09,Domingo,164,132,100,118,41,36,31,soleado_nublado_lluvioso
+2025-05-10,Lunes,175,141,107,128,47,38,34,soleado
+2025-05-11,Martes,192,150,113,135,53,43,38,nublado_lluvioso
+2025-05-12,Miércoles,220,173,127,150,63,50,44,soleado_lluvioso
+2025-05-13,Jueves,236,189,155,168,76,59,51,soleado_nublado
+2025-05-14,Viernes,223,181,132,157,69,52,44,soleado
+2025-05-15,Sábado,252,210,172,184,82,64,54,nublado
+2025-05-16,Domingo,178,154,120,137,53,46,41,soleado_nublado
+2025-05-17,Lunes,185,149,112,130,52,43,38,lluvioso
+2025-05-18,Martes,204,159,118,141,60,48,42,soleado_lluvioso
+2025-05-19,Miércoles,227,184,147,162,71,55,48,soleado
+2025-05-20,Jueves,250,197,150,173,72,56,50,nublado_lluvioso
+2025-05-21,Viernes,233,194,155,172,78,57,47,soleado
+2025-05-22,Sábado,271,222,183,207,93,70,60,nublado_lluvioso
+2025-05-23,Domingo,188,157,125,143,58,47,42,soleado
+2025-05-24,Lunes,191,154,120,137,56,44,39,nublado_lluvioso
+2025-05-25,Martes,216,176,132,154,64,51,45,soleado
+2025-05-26,Miércoles,236,192,157,170,78,60,51,nublado_lluvioso
+2025-05-27,Jueves,223,184,135,159,71,53,44,soleado
+2025-05-28,Viernes,231,186,154,169,81,62,53,nublado_lluvioso
+2025-05-29,Sábado,258,213,186,205,107,80,71,soleado
+2025-05-30,Domingo,179,157,128,142,56,48,43,nublado_lluvioso
+2025-05-31,Lunes,202,163,133,145,62,51,45,soleado
+2025-06-01,Martes,187,152,122,138,54,44,38,soleado_nublado
+2025-06-02,Miércoles,215,172,133,153,64,51,45,lluvioso
+2025-06-03,Jueves,230,184,139,160,63,51,44,soleado_lluvioso
+2025-06-04,Viernes,210,167,145,171,68,53,41,soleado
+2025-06-05,Sábado,240,201,169,185,78,60,50,nublado_lluvioso
+2025-06-06,Domingo,167,135,103,121,39,36,31,soleado_nublado_lluvioso
+2025-06-07,Lunes,178,144,110,131,45,37,34,soleado
+2025-06-08,Martes,195,153,116,138,51,42,38,nublado_lluvioso
+2025-06-09,Miércoles,223,176,130,153,61,49,44,soleado_lluvioso
+2025-06-10,Jueves,239,192,158,169,74,58,51,soleado_nublado
+2025-06-11,Viernes,226,184,135,159,67,51,44,soleado
+2025-06-12,Sábado,255,213,175,188,80,63,54,nublado
+2025-06-13,Domingo,181,157,125,140,52,45,40,soleado_nublado
+2025-06-14,Lunes,188,152,117,133,51,42,37,lluvioso
+2025-06-15,Martes,207,162,123,144,59,47,41,soleado_lluvioso
+2025-06-16,Miércoles,230,187,152,165,70,54,48,soleado
+2025-06-17,Jueves,253,200,155,176,71,55,50,nublado_lluvioso
+2025-06-18,Viernes,236,197,160,175,77,56,47,soleado
+2025-06-19,Sábado,274,225,188,211,92,69,59,nublado_lluvioso
+2025-06-20,Domingo,191,160,128,146,57,48,43,soleado
+2025-06-21,Lunes,194,157,123,140,55,45,39,nublado_lluvioso
+2025-06-22,Martes,219,179,135,157,63,52,45,soleado
+2025-06-23,Miércoles,239,195,160,173,78,60,51,nublado_lluvioso
+2025-06-24,Jueves,226,187,138,162,71,53,44,soleado
+2025-06-25,Viernes,234,189,157,172,81,62,53,nublado_lluvioso
+2025-06-26,Sábado,261,216,189,208,107,81,72,soleado
+2025-06-27,Domingo,182,160,130,145,58,49,44,nublado_lluvioso
+2025-06-28,Lunes,205,166,135,148,64,52,46,soleado
+2025-06-29,Martes,190,155,125,141,56,45,39,soleado_nublado
+2025-06-30,Miércoles,218,175,136,156,66,52,46,lluvioso
+2025-07-01,Jueves,233,187,142,163,65,52,45,soleado_lluvioso
+2025-07-02,Viernes,213,170,148,174,70,54,42,soleado
+2025-07-03,Sábado,243,204,172,188,80,61,51,nublado_lluvioso
+2025-07-04,Domingo,170,138,107,124,41,36,31,soleado_nublado_lluvioso
+2025-07-05,Lunes,181,147,114,134,47,37,34,soleado
+2025-07-06,Martes,198,156,120,141,53,42,38,nublado_lluvioso
+2025-07-07,Miércoles,226,179,134,156,63,50,44,soleado_lluvioso
+2025-07-08,Jueves,242,195,161,173,74,59,51,soleado_nublado
+2025-07-09,Viernes,229,187,138,162,67,51,44,soleado
+2025-07-10,Sábado,258,216,178,191,80,63,54,nublado
+2025-07-11,Domingo,184,160,130,143,52,45,40,soleado_nublado
+2025-07-12,Lunes,191,155,122,136,51,42,37,lluvioso
+2025-07-13,Martes,210,165,128,147,59,47,41,soleado_lluvioso
+2025-07-14,Miércoles,233,190,157,168,70,54,48,soleado
+2025-07-15,Jueves,256,203,160,179,71,55,50,nublado_lluvioso
+2025-07-16,Viernes,239,200,165,178,77,56,47,soleado
+2025-07-17,Sábado,277,228,190,214,92,69,59,nublado_lluvioso
+2025-07-18,Domingo,194,163,133,149,57,48,43,soleado
+2025-07-19,Lunes,197,160,128,143,55,45,39,nublado_lluvioso
+2025-07-20,Martes,222,182,140,160,63,52,45,soleado
+2025-07-21,Miércoles,242,198,165,176,78,60,51,nublado_lluvioso
+2025-07-22,Jueves,229,190,143,165,71,53,44,soleado
+2025-07-23,Viernes,237,192,162,175,81,62,53,nublado_lluvioso
+2025-07-24,Sábado,264,219,194,211,107,82,73,soleado
+2025-07-25,Domingo,185,163,136,148,58,49,44,nublado_lluvioso
+2025-07-26,Lunes,208,169,141,151,64,52,46,soleado
+2025-07-27,Martes,193,158,128,144,56,45,39,soleado_nublado
+2025-07-28,Miércoles,221,178,139,159,66,52,46,lluvioso
+2025-07-29,Jueves,236,190,145,166,65,52,45,soleado_lluvioso
+2025-07-30,Viernes,216,173,151,177,70,54,42,soleado
+2025-07-31,Sábado,246,207,175,191,80,61,51,nublado_lluvioso
+2025-08-01,Domingo,173,141,110,127,41,36,31,soleado_nublado_lluvioso
+2025-08-02,Lunes,184,150,117,137,47,37,34,soleado
+2025-08-03,Martes,201,159,123,144,53,42,38,nublado_lluvioso
+2025-08-04,Miércoles,229,182,137,159,63,50,44,soleado_lluvioso
+2025-08-05,Jueves,245,198,164,176,74,59,51,soleado_nublado
+2025-08-06,Viernes,232,190,140,165,67,51,44,soleado
+2025-08-07,Sábado,261,219,183,194,80,63,54,nublado
+2025-08-08,Domingo,187,163,136,146,52,45,40,soleado_nublado
+2025-08-09,Lunes,194,158,128,140,51,42,37,lluvioso
+2025-08-10,Martes,213,168,134,151,59,47,41,soleado_lluvioso
+2025-08-11,Miércoles,236,193,163,172,70,54,48,soleado
+2025-08-12,Jueves,259,206,166,182,71,55,50,nublado_lluvioso
+2025-08-13,Viernes,242,203,171,181,77,56,47,soleado
+2025-08-14,Sábado,280,231,194,217,92,69,59,nublado_lluvioso
+2025-08-15,Domingo,197,166,139,152,57,48,43,soleado
+2025-08-16,Lunes,200,163,134,146,55,45,39,nublado_lluvioso
+2025-08-17,Martes,225,185,146,163,63,52,45,soleado
+2025-08-18,Miércoles,245,201,171,179,78,60,51,nublado_lluvioso
+2025-08-19,Jueves,232,193,148,168,71,53,44,soleado
+2025-08-20,Viernes,240,195,167,178,81,62,53,nublado_lluvioso
+2025-08-21,Sábado,267,222,199,214,107,83,74,soleado
+2025-08-22,Domingo,188,166,141,151,58,49,44,nublado_lluvioso
+2025-08-23,Lunes,211,172,146,154,64,52,46,soleado
+2025-08-24,Martes,196,161,136,147,56,45,39,soleado_nublado
+2025-08-25,Miércoles,224,181,147,162,66,52,46,lluvioso
+2025-08-26,Jueves,239,193,153,169,65,52,45,soleado_lluvioso
+2025-08-27,Viernes,219,176,159,175,70,54,42,soleado
+2025-08-28,Sábado,249,210,183,191,80,61,51,nublado_lluvioso
+2025-08-29,Domingo,176,144,115,130,41,36,31,soleado_nublado_lluvioso
+2025-08-30,Lunes,187,153,122,140,47,37,34,soleado
+2025-08-31,Martes,204,162,128,147,53,42,38,nublado_lluvioso
+2025-09-01,Miércoles,232,185,142,162,63,50,44,soleado_lluvioso
+2025-09-02,Jueves,248,201,169,179,74,59,51,soleado_nublado
+2025-09-03,Viernes,235,193,145,168,67,51,44,soleado
+2025-09-04,Sábado,264,222,188,197,80,63,54,nublado
+2025-09-05,Domingo,190,166,139,149,52,45,40,soleado_nublado
+2025-09-06,Lunes,197,161,131,143,51,42,37,lluvioso
+2025-09-07,Martes,216,171,137,154,59,47,41,soleado_lluvioso
+2025-09-08,Miércoles,239,196,166,175,70,54,48,soleado
+2025-09-09,Jueves,262,209,169,186,71,55,50,nublado_lluvioso
+2025-09-10,Viernes,245,206,174,185,77,56,47,soleado
+2025-09-11,Sábado,283,234,197,220,92,69,59,nublado_lluvioso
+2025-09-12,Domingo,200,169,141,154,57,48,43,soleado
+2025-09-13,Lunes,203,166,136,148,55,45,39,nublado_lluvioso
+2025-09-14,Martes,228,188,148,165,63,52,45,soleado
+2025-09-15,Miércoles,248,204,174,181,78,60,51,nublado_lluvioso
+2025-09-16,Jueves,235,196,151,170,71,53,44,soleado
+2025-09-17,Viernes,243,198,170,180,81,62,53,nublado_lluvioso
+2025-09-18,Sábado,270,225,202,217,107,83,74,soleado
+2025-09-19,Domingo,191,154,125,142,46,38,33,soleado_nublado_lluvioso
+2025-09-20,Lunes,202,163,132,152,52,43,36,soleado
+2025-09-21,Martes,219,172,138,159,58,47,40,nublado_lluvioso
+2025-09-22,Miércoles,247,195,152,174,68,54,47,soleado_lluvioso
+2025-09-23,Jueves,263,211,179,191,79,63,54,soleado_nublado
