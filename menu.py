@@ -133,7 +133,7 @@ class MenuApp:
 
         btn_interpretar = ctk.CTkButton(
             menu_container, 
-            text="Interpretar Datos", 
+            text="Por implementar", 
             font=button_font, 
             width=button_width, 
             height=button_height,
