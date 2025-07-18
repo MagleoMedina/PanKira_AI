@@ -4,21 +4,12 @@ from tensorflow import keras
 import joblib
 import sys
 import os
-import warnings
 from sklearn.model_selection import train_test_split
-# --- NUEVO: IMPORTAR MATPLOTLIB PARA LAS GRÁFICAS ---
 import matplotlib.pyplot as plt
-# --- NUEVO: IMPORTAR HERRAMIENTAS DE REGULARIZACIÓN Y EARLY STOPPING ---
 from keras.callbacks import EarlyStopping
 from keras.layers import Dropout
 from keras.regularizers import l2
 
-try:
-    import google.protobuf
-    if tuple(map(int, google.protobuf.__version__.split('.'))) > (3, 20, 3):
-        warnings.warn("Se recomienda usar protobuf==3.20.3 para evitar errores con TensorFlow/Keras.")
-except Exception:
-    pass
 
 PANES = [
     "Pan_Canilla_Cantidad",
@@ -30,7 +21,7 @@ PANES = [
     "Pan_De_Arequipe_Cantidad"
 ]
 
-# Cambia aquí el nombre del archivo
+# Cargar y preparar los datos
 df = pd.read_csv("pankira.csv")
 cols = ["Dia_De_La_Semana", "Clima"] + PANES
 df = df[cols]
@@ -43,22 +34,23 @@ for pan in PANES:
 le_dia = LabelEncoder()
 data['Dia_enc'] = le_dia.fit_transform(data['Dia_De_La_Semana'])
 
+# Codificar Clima
 le_clima = LabelEncoder()
 data['Clima_enc'] = le_clima.fit_transform(data['Clima'])
 
+# Asegurarse de que la carpeta 'models' exista
 os.makedirs("models", exist_ok=True)
 joblib.dump(le_dia, "models/label_encoder_dia.pkl")
 joblib.dump(list(le_dia.classes_), "models/dias_semana.pkl")
 joblib.dump(le_clima, "models/label_encoder_clima.pkl")
 joblib.dump(list(le_clima.classes_), "models/climas.pkl")
 
+# Preparar los datos para el entrenamiento
 X_features = data[['Dia_enc', 'Clima_enc']].values
 
 X_train_base, X_test_base, y_train_base, y_test_base = train_test_split(
     X_features, data[PANES], test_size=0.2, random_state=42
 )
-
-# ... (código anterior sin cambios)
 
 # Bucle de entrenamiento principal
 total = len(PANES)
@@ -74,7 +66,6 @@ for idx, pan in enumerate(PANES):
     y_train_scaled = scaler_y.fit_transform(y_train)
     y_test_scaled = scaler_y.transform(y_test)
 
-   # --- NUEVO AJUSTE: REGULARIZACIÓN MÁS SUAVE Y MAYOR CAPACIDAD ---
     # Hemos reducido el Dropout y el factor de L2.
     # Hemos aumentado las neuronas de 8 a 16 para darle más capacidad de aprendizaje.
     model = keras.Sequential([
@@ -82,18 +73,16 @@ for idx, pan in enumerate(PANES):
         keras.layers.Dense(16, activation='relu', kernel_regularizer=l2(0.0001)), # Más neuronas, menos regularización L2
         Dropout(0.2), # Dropout reducido al 20%
         keras.layers.Dense(8, activation='relu', kernel_regularizer=l2(0.0001)), # Capa intermedia (antes 4), L2 reducida
-        # Ya no es necesaria una segunda capa de Dropout aquí, probemos sin ella.
         keras.layers.Dense(1)
     ])
 
     model.compile(optimizer='adam', loss='mse', metrics=['mae'])
 
-    # El EarlyStopping sigue siendo una excelente idea, lo mantenemos igual.
-    # Quizás podemos darle un poco más de paciencia.
+    # Añadimos EarlyStopping para evitar sobreentrenamiento
+    # y permitir un entrenamiento más largo si es necesario.
     early_stopping = EarlyStopping(
         monitor='val_loss',
-        patience=15, # Un poco más de paciencia (opcional)
-        restore_best_weights=True,
+        patience=15, # Un poco más de paciencia
         verbose=1
     )
 
@@ -105,11 +94,9 @@ for idx, pan in enumerate(PANES):
                           callbacks=[early_stopping]
                          )
 
-    # ... (el resto de tu código para evaluar, graficar y guardar sigue igual)
     loss, mae = model.evaluate(X_test_scaled, y_test_scaled, verbose=0)
     print(f"\nModelo para {pan}: Loss (MSE) en prueba = {loss:.4f}, MAE en prueba = {mae:.4f}")
 
-    # --- NUEVO: CÓDIGO PARA GENERAR Y MOSTRAR LA GRÁFICA ---
     plt.figure(figsize=(12, 6))
     
     # Gráfica de Pérdida (MSE)
@@ -131,16 +118,17 @@ for idx, pan in enumerate(PANES):
     plt.ylabel('Error Absoluto Medio (MAE)')
     plt.legend()
     plt.grid(True)
-    
+
+    # Ajustar el layout para que no se solapen los títulos
     plt.tight_layout() # Ajusta el layout para que no se solapen los títulos
     plt.show() # Muestra la gráfica en una ventana
-    
-    # --- FIN DEL CÓDIGO NUEVO ---
 
+    # Guardar el modelo y los scalers
     model.save(f"models/modelo_{pan}.keras")
     joblib.dump(scaler_X, f"models/scaler_X_{pan}.pkl")
     joblib.dump(scaler_y, f"models/scaler_y_{pan}.pkl")
-
+    
+    # Mostrar progreso de entrenamiento
     percent = int(((idx + 1) / total) * 100)
     sys.stdout.write(f"\rEntrenando modelos: [{'#' * percent}{'.' * (100 - percent)}] {percent}%")
     sys.stdout.flush()

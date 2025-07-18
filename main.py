@@ -4,6 +4,7 @@ import customtkinter as ctk
 import pandas as pd 
 
 class MainApp:
+    # Clase para manejar la lógica de predicción
     PANES = [
         "Pan_Canilla_Cantidad",
         "Pan_Frances_Cantidad",
@@ -15,6 +16,7 @@ class MainApp:
     ]
 
     def __init__(self, parent_frame, on_back=None):
+        """Inicializa la aplicación de predicción de demanda de pan."""
         self.parent_frame = parent_frame
         self.on_back = on_back
 
@@ -77,17 +79,17 @@ class MainApp:
         widget_padx = 20
 
         ctk.CTkLabel(controls_frame, text="Día de la semana:", font=label_font).grid(row=1, column=0, padx=widget_padx, pady=widget_pady, sticky="w")
-        self.combo_dia = ctk.CTkComboBox(controls_frame, values=self.DIAS_SEMANA, font=combo_font, width=200, height=35)
+        self.combo_dia = ctk.CTkComboBox(controls_frame, values=self.DIAS_SEMANA, font=combo_font, width=200, height=35, state="readonly")
         self.combo_dia.grid(row=1, column=1, padx=widget_padx, pady=widget_pady, sticky="ew")
         self.combo_dia.set(self.DIAS_SEMANA[0])
 
         ctk.CTkLabel(controls_frame, text="Clima:", font=label_font).grid(row=2, column=0, padx=widget_padx, pady=widget_pady, sticky="w")
-        self.combo_clima = ctk.CTkComboBox(controls_frame, values=self.CLIMAS, font=combo_font, width=200, height=35)
+        self.combo_clima = ctk.CTkComboBox(controls_frame, values=self.CLIMAS, font=combo_font, width=200, height=35, state="readonly")
         self.combo_clima.grid(row=2, column=1, padx=widget_padx, pady=widget_pady, sticky="ew")
         self.combo_clima.set(self.CLIMAS[0])
 
         ctk.CTkLabel(controls_frame, text="Tipo de pan:", font=label_font).grid(row=3, column=0, padx=widget_padx, pady=widget_pady, sticky="w")
-        self.combo_pan = ctk.CTkComboBox(controls_frame, values=self.PANES, font=combo_font, width=200, height=35)
+        self.combo_pan = ctk.CTkComboBox(controls_frame, values=self.PANES, font=combo_font, width=200, height=35, state="readonly")
         self.combo_pan.grid(row=3, column=1, padx=widget_padx, pady=widget_pady, sticky="ew")
         self.combo_pan.set(self.PANES[0])
 
@@ -114,6 +116,7 @@ class MainApp:
 
 
     def _show_error_and_back(self, message):
+        """Muestra un mensaje de error y un botón para volver al menú principal."""
         for widget in self.parent_frame.winfo_children():
             widget.destroy()
         
@@ -139,10 +142,12 @@ class MainApp:
 
 
     def _atras(self):
+        """Maneja la acción de volver al menú principal."""
         if self.on_back:
             self.on_back()
 
     def predecir(self):
+        """Calcula la predicción de demanda de pan según la selección del usuario."""
         dia = self.combo_dia.get()
         clima = self.combo_clima.get()
         pan = self.combo_pan.get()
@@ -155,7 +160,6 @@ class MainApp:
             dia_enc = self.le_dia.transform([dia])[0]
             clima_enc = self.le_clima.transform([clima])[0]
             
-            # **CORRECCIÓN AQUÍ**: Convertir el DataFrame a un arreglo de NumPy
             X_input_raw = pd.DataFrame([[dia_enc, clima_enc]], columns=['Dia_De_La_Semana_Encoded', 'Clima_Encoded'])
             X_input_scaled = self.scalers[pan].transform(X_input_raw.values) # <-- ¡Aquí está el cambio!
             
