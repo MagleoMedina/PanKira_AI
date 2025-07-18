@@ -9,7 +9,7 @@ class MenuApp:
         # Establece el modo de apariencia a "Dark" para un look más moderno y profesional
         ctk.set_appearance_mode("Dark")
         # Establece el color primario para los widgets, que afectará botones, comboboxes, etc.
-        ctk.set_default_color_theme("blue") # Puedes probar "dark-blue", "green"
+        ctk.set_default_color_theme("blue")
 
         self.root = ctk.CTk()
         self.root.title("PanKira AI")
@@ -23,6 +23,7 @@ class MenuApp:
         self.mostrar_menu_principal()
 
     def abrir_prediccion(self):
+        """Carga el módulo de predicción y muestra la interfaz."""
         for widget in self.main_frame.winfo_children():
             widget.destroy()
         
@@ -46,6 +47,7 @@ class MenuApp:
         self.main_frame.after(0, progress.start)
 
         def cargar_main():
+            """Carga el módulo main.py y muestra la interfaz de predicción."""
             try:
                 spec = importlib.util.spec_from_file_location("main", os.path.join(os.path.dirname(__file__), "main.py"))
                 main_mod = importlib.util.module_from_spec(spec)
@@ -60,6 +62,7 @@ class MenuApp:
                 self.main_frame.after(0, lambda: _finish_loading(None, f"Error al cargar main.py: {e}"))
 
         def _finish_loading(main_func, error_message=None):
+            """Finaliza la carga del módulo y muestra el contenido."""
             progress.stop()
             for widget in self.main_frame.winfo_children():
                 widget.destroy()
@@ -93,12 +96,14 @@ class MenuApp:
         threading.Thread(target=cargar_main).start()
 
     def interpretar(self):
-        messagebox.showinfo("Funcionalidad", "Esta funcionalidad está en desarrollo. ¡Pronto estará disponible!")
-
+      pass  
+      
     def cerrar(self):
+        """Cierra la aplicación."""
         self.root.destroy()
 
     def mostrar_menu_principal(self):
+        """Muestra el menú principal de la aplicación."""
         for widget in self.main_frame.winfo_children():
             widget.destroy()
             
@@ -156,6 +161,7 @@ class MenuApp:
         btn_cerrar.pack(pady=button_pady)
 
     def run(self):
+        """Inicia la aplicación."""
         self.root.mainloop()
 
 if __name__ == "__main__":
