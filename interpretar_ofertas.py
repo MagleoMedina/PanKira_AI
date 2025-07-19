@@ -3,6 +3,24 @@ from tensorflow import keras
 import customtkinter as ctk
 import pandas as pd
 
+# --- Paleta de Colores Consistente con menu.py y main.py ---
+# Adaptada para un fondo claro y una estética de panadería cálida.
+COLOR_PALETTE = {
+    "bg_main": "#F8F5EB",      # Crema muy claro / Casi blanco, cálido como el interior del pan
+    "bg_panel": "#FFFFFF",     # Blanco puro para paneles y frames internos
+    "primary_btn": "#CD853F",  # Naranja cálido (Peru) - Vibrante y atractivo, color de la corteza
+    "primary_hover": "#A0522D",# Marrón rojizo oscuro (Sienna) - Para hover, profundo y cálido
+    "secondary_btn": "#8B4513",# Marrón más oscuro (SaddleBrown) - Para acentos o bordes
+    "accent_ui": "#FFDAB9",    # Naranja muy suave (PeachPuff) - Para entradas, un toque delicado
+    "text_dark": "#4A3C30",    # Marrón oscuro para texto principal (Coffee Brown)
+    "text_light": "#FFFFFF",   # Blanco para texto sobre fondos oscuros (ej. botones primary_btn)
+    "text_muted": "#8B8B7A",   # Gris verdoso suave para texto secundario (Dark Khaki)
+    "border_light": "#D3D3D3", # Gris claro para bordes sutiles
+    "error_text": "#DC143C",   # Rojo oscuro para mensajes de error (Crimson)
+    "loading_text": "#D13C01", # Azul pizarra medio para mensajes de carga (Slate Blue)
+    "success_text": "#004D22"  # Verde medio para resultados exitosos (MediumSeaGreen)
+}
+
 class OfertasApp:
     """
     Clase para la interfaz de recomendación de ofertas basadas en
@@ -51,54 +69,126 @@ class OfertasApp:
         for widget in self.parent_frame.winfo_children():
             widget.destroy()
 
-        ofertas_frame = ctk.CTkFrame(self.parent_frame, fg_color="transparent")
+        # Frame principal de ofertas, con el color de fondo principal
+        ofertas_frame = ctk.CTkFrame(self.parent_frame, fg_color=COLOR_PALETTE["bg_main"])
         ofertas_frame.pack(fill="both", expand=True, padx=20, pady=20)
 
+        # Botón para volver al menú principal
         btn_atras = ctk.CTkButton(
-            ofertas_frame, text="Menú Principal", width=120, height=35,
-            corner_radius=8, fg_color="gray50", hover_color="gray60",
-            font=ctk.CTkFont(family="Arial", size=14, weight="bold"),
+            ofertas_frame, 
+            text="Menú Principal", 
+            width=150, 
+            height=40, 
+            corner_radius=10,
+            fg_color=COLOR_PALETTE["secondary_btn"], 
+            hover_color=COLOR_PALETTE["primary_hover"],
+            text_color=COLOR_PALETTE["text_light"],
+            font=ctk.CTkFont(family="Roboto", size=16, weight="bold"),
             command=self._atras
         )
-        btn_atras.pack(side="top", anchor="nw", padx=10, pady=10)
+        btn_atras.pack(side="top", anchor="nw", padx=15, pady=15)
 
-        controls_frame = ctk.CTkFrame(ofertas_frame, fg_color="transparent")
-        controls_frame.pack(expand=True, fill="both", padx=20, pady=10)
+        # Frame para los controles de entrada y resultados (la "tarjeta" central)
+        controls_frame = ctk.CTkFrame(
+            ofertas_frame, 
+            fg_color=COLOR_PALETTE["bg_panel"], 
+            corner_radius=15, 
+            border_color=COLOR_PALETTE["border_light"],
+            border_width=1
+        )
+        controls_frame.pack(expand=True, fill="both", padx=40, pady=40)
+        
+        # Configuración de grid para el controls_frame
+        controls_frame.grid_columnconfigure(0, weight=1)
+        controls_frame.grid_columnconfigure(1, weight=1)
+        # Aseguramos que las filas se ajusten al contenido
+        for i in range(5): # 0 a 4 para las filas de widgets
+            controls_frame.grid_rowconfigure(i, weight=0)
+        controls_frame.grid_rowconfigure(4, weight=1) # Textbox de resultados se expande
 
+        # Título de la sección
         ctk.CTkLabel(
-            controls_frame, text="Recomendación de Ofertas",
-            font=ctk.CTkFont(family="Arial", size=28, weight="bold"),
-            text_color="gray80"
-        ).grid(row=0, column=0, columnspan=2, pady=(10, 20))
+            controls_frame, 
+            text="Recomendación de Ofertas",
+            font=ctk.CTkFont(family="Georgia", size=32, weight="bold"),
+            text_color=COLOR_PALETTE["primary_btn"]
+        ).grid(row=0, column=0, columnspan=2, pady=(30, 40))
 
-        label_font = ctk.CTkFont(family="Arial", size=16)
-        combo_font = ctk.CTkFont(family="Arial", size=16)
+        label_font = ctk.CTkFont(family="Roboto", size=16, weight="normal")
+        combo_font = ctk.CTkFont(family="Roboto", size=16, weight="normal")
+        widget_pady = 18
+        widget_padx = 25
 
-        ctk.CTkLabel(controls_frame, text="Día de la semana:", font=label_font).grid(row=1, column=0, padx=20, pady=15, sticky="w")
-        self.combo_dia = ctk.CTkComboBox(controls_frame, values=self.DIAS_SEMANA, font=combo_font, width=200, height=35, state="readonly")
-        self.combo_dia.grid(row=1, column=1, padx=20, pady=15, sticky="ew")
+        # Día de la semana
+        ctk.CTkLabel(controls_frame, text="Día de la semana:", font=label_font, text_color=COLOR_PALETTE["text_dark"]).grid(row=1, column=0, padx=widget_padx, pady=widget_pady, sticky="w")
+        self.combo_dia = ctk.CTkComboBox(
+            controls_frame, 
+            values=self.DIAS_SEMANA, 
+            font=combo_font, 
+            width=250, 
+            height=45, 
+            state="readonly",
+            fg_color=COLOR_PALETTE["accent_ui"],
+            text_color=COLOR_PALETTE["text_dark"],
+            button_color=COLOR_PALETTE["primary_btn"],
+            button_hover_color=COLOR_PALETTE["primary_hover"],
+            dropdown_fg_color=COLOR_PALETTE["accent_ui"],
+            dropdown_text_color=COLOR_PALETTE["text_dark"],
+            corner_radius=8
+        )
+        self.combo_dia.grid(row=1, column=1, padx=widget_padx, pady=widget_pady, sticky="ew")
         self.combo_dia.set(self.DIAS_SEMANA[0])
 
-        ctk.CTkLabel(controls_frame, text="Clima:", font=label_font).grid(row=2, column=0, padx=20, pady=15, sticky="w")
-        self.combo_clima = ctk.CTkComboBox(controls_frame, values=self.CLIMAS, font=combo_font, width=200, height=35, state="readonly")
-        self.combo_clima.grid(row=2, column=1, padx=20, pady=15, sticky="ew")
+        # Clima
+        ctk.CTkLabel(controls_frame, text="Clima:", font=label_font, text_color=COLOR_PALETTE["text_dark"]).grid(row=2, column=0, padx=widget_padx, pady=widget_pady, sticky="w")
+        self.combo_clima = ctk.CTkComboBox(
+            controls_frame, 
+            values=self.CLIMAS, 
+            font=combo_font, 
+            width=250, 
+            height=45, 
+            state="readonly",
+            fg_color=COLOR_PALETTE["accent_ui"],
+            text_color=COLOR_PALETTE["text_dark"],
+            button_color=COLOR_PALETTE["primary_btn"],
+            button_hover_color=COLOR_PALETTE["primary_hover"],
+            dropdown_fg_color=COLOR_PALETTE["accent_ui"],
+            dropdown_text_color=COLOR_PALETTE["text_dark"],
+            corner_radius=8
+        )
+        self.combo_clima.grid(row=2, column=1, padx=widget_padx, pady=widget_pady, sticky="ew")
         self.combo_clima.set(self.CLIMAS[0])
 
+        # Botón Analizar y Recomendar Ofertas
         btn_analizar = ctk.CTkButton(
-            controls_frame, text="Analizar y Recomendar Ofertas",
-            corner_radius=8, font=ctk.CTkFont(family="Arial", size=18, weight="bold"),
-            height=45, command=self.recomendar_ofertas
+            controls_frame, 
+            text="Analizar y Recomendar Ofertas",
+            corner_radius=12, 
+            font=ctk.CTkFont(family="Roboto", size=20, weight="bold"),
+            height=55, 
+            fg_color=COLOR_PALETTE["primary_btn"], 
+            hover_color=COLOR_PALETTE["primary_hover"],
+            text_color=COLOR_PALETTE["text_light"],
+            command=self.recomendar_ofertas
         )
-        btn_analizar.grid(row=3, column=0, columnspan=2, pady=(20, 10))
+        btn_analizar.grid(row=3, column=0, columnspan=2, pady=(40, 30))
 
+        # Textbox de Resultados
         self.textbox_result = ctk.CTkTextbox(
-            controls_frame, font=ctk.CTkFont(family="Courier New", size=14),
-            height=200, wrap="word", state="disabled"
+            controls_frame, 
+            font=ctk.CTkFont(family="Roboto", size=15, weight="normal"), # Fuente Roboto para resultados
+            height=200, 
+            wrap="word", 
+            state="disabled",
+            fg_color=COLOR_PALETTE["accent_ui"], # Fondo del textbox de resultados
+            text_color=COLOR_PALETTE["text_dark"], # Texto oscuro
+            border_color=COLOR_PALETTE["border_light"],
+            border_width=1,
+            corner_radius=8
         )
-        self.textbox_result.grid(row=4, column=0, columnspan=2, pady=10, sticky="nsew")
+        self.textbox_result.grid(row=4, column=0, columnspan=2, pady=(10, 20), sticky="nsew", padx=widget_padx)
 
-        controls_frame.grid_columnconfigure(1, weight=1)
-        controls_frame.grid_rowconfigure(4, weight=1)
+        # La columna 1 ya se expande, y la fila 4 ya se expande.
 
     def recomendar_ofertas(self):
         """
@@ -125,7 +215,9 @@ class OfertasApp:
                 prediccion_actual = int(prediccion_actual)
 
                 # 2. Obtener el promedio histórico
-                promedio_historico = int(self.promedios_ventas[pan].get(dia, 0))
+                # CORRECCIÓN: Usar .get() con un diccionario vacío como fallback para evitar KeyError
+                promedio_historico = int(self.promedios_ventas.get(pan, {}).get(dia, 0))
+
 
                 # 3. Comparar y decidir si se recomienda oferta
                 if promedio_historico > 0 and prediccion_actual < (promedio_historico * UMBRAL_OFERTA):
@@ -143,23 +235,43 @@ class OfertasApp:
             self.textbox_result.delete("1.0", "end")
             if recomendaciones:
                 titulo = f"Sugerencias de Ofertas para {dia} con clima {clima}:\n{'-'*50}\n\n"
-                self.textbox_result.insert("1.0", titulo + "\n".join(recomendaciones))
+                # Eliminado el argumento text_color aquí, ya que CTkTextbox.insert() no lo soporta
+                self.textbox_result.insert("1.0", titulo + "\n".join(recomendaciones)) 
+                # Si quieres cambiar el color de todo el texto en el textbox, hazlo así:
+                self.textbox_result.configure(text_color=COLOR_PALETTE["success_text"])
             else:
+                # Eliminado el argumento text_color aquí
                 self.textbox_result.insert("1.0", "Análisis completado. No se detectan bajas significativas en las ventas proyectadas. ¡No se requieren ofertas especiales para hoy!")
+                # Si quieres cambiar el color de todo el texto en el textbox, hazlo así:
+                self.textbox_result.configure(text_color=COLOR_PALETTE["text_dark"])
             self.textbox_result.configure(state="disabled")
 
         except Exception as e:
+            # Asegurarse de que el error se muestre correctamente
             self._show_error_and_back(f"Error al analizar ofertas: {e}")
 
     def _show_error_and_back(self, message):
         """Muestra un mensaje de error y un botón para volver."""
         for widget in self.parent_frame.winfo_children():
             widget.destroy()
+        # Aplicar la paleta de colores y fuentes consistentes al mensaje de error
         ctk.CTkLabel(
-            self.parent_frame, text=message, font=("Arial", 16), text_color="red", wraplength=400
+            self.parent_frame, 
+            text=message, 
+            font=ctk.CTkFont(family="Roboto", size=18, weight="bold"), 
+            text_color=COLOR_PALETTE["error_text"], 
+            wraplength=self.parent_frame.winfo_width() * 0.7
         ).place(relx=0.5, rely=0.4, anchor="center")
+        # Aplicar la paleta de colores y fuentes consistentes al botón de volver
         ctk.CTkButton(
-            self.parent_frame, text="Volver al Menú", command=self.on_back
+            self.parent_frame, 
+            text="Volver al Menú", 
+            command=self.on_back,
+            fg_color=COLOR_PALETTE["secondary_btn"],
+            hover_color=COLOR_PALETTE["primary_hover"],
+            text_color=COLOR_PALETTE["text_light"],
+            font=ctk.CTkFont(family="Roboto", size=16, weight="normal"),
+            corner_radius=10
         ).place(relx=0.5, rely=0.6, anchor="center")
 
     def _atras(self):

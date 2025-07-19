@@ -3,6 +3,24 @@ from tensorflow import keras
 import customtkinter as ctk
 import pandas as pd 
 
+# --- Paleta de Colores Consistente con menu.py ---
+# Adaptada para un fondo claro y una estética de panadería cálida.
+COLOR_PALETTE = {
+    "bg_main": "#F8F5EB",      # Crema muy claro / Casi blanco, cálido como el interior del pan
+    "bg_panel": "#FFFFFF",     # Blanco puro para paneles y frames internos
+    "primary_btn": "#CD853F",  # Naranja cálido (Peru) - Vibrante y atractivo, color de la corteza
+    "primary_hover": "#A0522D",# Marrón rojizo oscuro (Sienna) - Para hover, profundo y cálido
+    "secondary_btn": "#8B4513",# Marrón más oscuro (SaddleBrown) - Para acentos o bordes
+    "accent_ui": "#FFDAB9",    # Naranja muy suave (PeachPuff) - Para entradas, un toque delicado
+    "text_dark": "#4A3C30",    # Marrón oscuro para texto principal (Coffee Brown)
+    "text_light": "#FFFFFF",   # Blanco para texto sobre fondos oscuros (ej. botones primary_btn)
+    "text_muted": "#8B8B7A",   # Gris verdoso suave para texto secundario (Dark Khaki)
+    "border_light": "#D3D3D3", # Gris claro para bordes sutiles
+    "error_text": "#DC143C",   # Rojo oscuro para mensajes de error (Crimson)
+    "loading_text": "#D13C01", # Azul pizarra medio para mensajes de carga (Slate Blue)
+    "success_text": "#014D23"  # Verde medio para resultados exitosos (MediumSeaGreen)
+}
+
 class MainApp:
     # Clase para manejar la lógica de predicción
     PANES = [
@@ -47,73 +65,142 @@ class MainApp:
         for widget in parent_frame.winfo_children():
             widget.destroy()
 
-        prediction_frame = ctk.CTkFrame(parent_frame, fg_color="transparent")
+        # Frame principal de la predicción, con el color de fondo principal
+        prediction_frame = ctk.CTkFrame(self.parent_frame, fg_color=COLOR_PALETTE["bg_main"])
         prediction_frame.pack(fill="both", expand=True, padx=20, pady=20) 
 
+        # Botón para volver al menú principal
         btn_atras = ctk.CTkButton(
             prediction_frame, 
             text="Menú Principal", 
-            width=120,
-            height=35, 
-            corner_radius=8,
-            fg_color="gray50", 
-            hover_color="gray60",
-            font=ctk.CTkFont(family="Arial", size=14, weight="bold"),
+            width=150, # Un poco más ancho
+            height=40, # Más alto
+            corner_radius=10, # Más redondeado
+            fg_color=COLOR_PALETTE["secondary_btn"], # Color secundario
+            hover_color=COLOR_PALETTE["primary_hover"], # Hover de la paleta
+            text_color=COLOR_PALETTE["text_light"], # Texto claro
+            font=ctk.CTkFont(family="Roboto", size=16, weight="bold"), # Fuente Roboto
             command=self._atras
         )
-        btn_atras.pack(side="top", anchor="nw", padx=10, pady=10) 
+        btn_atras.pack(side="top", anchor="nw", padx=15, pady=15) # Más padding
 
-        controls_frame = ctk.CTkFrame(prediction_frame, fg_color="transparent")
-        controls_frame.pack(expand=True, fill="both", padx=20, pady=20) 
+        # Frame para los controles de entrada (la "tarjeta" central)
+        controls_frame = ctk.CTkFrame(
+            prediction_frame, 
+            fg_color=COLOR_PALETTE["bg_panel"], # Blanco puro para el panel
+            corner_radius=15, # Esquinas más redondeadas
+            border_color=COLOR_PALETTE["border_light"], # Borde sutil
+            border_width=1
+        )
+        controls_frame.pack(expand=True, fill="both", padx=40, pady=40) # Más padding
+        
+        # Configuración de grid para el controls_frame
+        controls_frame.grid_columnconfigure(0, weight=1)
+        controls_frame.grid_columnconfigure(1, weight=1)
+        # Aseguramos que las filas se ajusten al contenido
+        for i in range(6): # 0 a 5 para las filas de widgets
+            controls_frame.grid_rowconfigure(i, weight=0)
 
+        # Título de la sección
         ctk.CTkLabel(
             controls_frame, 
             text="Predicción de Demanda de Pan", 
-            font=ctk.CTkFont(family="Arial", size=28, weight="bold"),
-            text_color="gray80"
-        ).grid(row=0, column=0, columnspan=2, pady=(20, 30)) 
+            font=ctk.CTkFont(family="Georgia", size=32, weight="bold"), # Fuente Georgia, más grande
+            text_color=COLOR_PALETTE["primary_btn"] # Color principal
+        ).grid(row=0, column=0, columnspan=2, pady=(30, 40)) # Más padding
 
-        label_font = ctk.CTkFont(family="Arial", size=16)
-        combo_font = ctk.CTkFont(family="Arial", size=16)
-        widget_pady = 15
-        widget_padx = 20
+        label_font = ctk.CTkFont(family="Roboto", size=16, weight="normal") # Fuente Roboto normal
+        combo_font = ctk.CTkFont(family="Roboto", size=16, weight="normal") # Fuente Roboto normal
+        widget_pady = 18 # Más espacio entre widgets
+        widget_padx = 25 # Más espacio lateral
 
-        ctk.CTkLabel(controls_frame, text="Día de la semana:", font=label_font).grid(row=1, column=0, padx=widget_padx, pady=widget_pady, sticky="w")
-        self.combo_dia = ctk.CTkComboBox(controls_frame, values=self.DIAS_SEMANA, font=combo_font, width=200, height=35, state="readonly")
+        # Día de la semana
+        ctk.CTkLabel(controls_frame, text="Día de la semana:", font=label_font, text_color=COLOR_PALETTE["text_dark"]).grid(row=1, column=0, padx=widget_padx, pady=widget_pady, sticky="w")
+        self.combo_dia = ctk.CTkComboBox(
+            controls_frame, 
+            values=self.DIAS_SEMANA, 
+            font=combo_font, 
+            width=250, 
+            height=45, # Altura ajustada
+            state="readonly",
+            fg_color=COLOR_PALETTE["accent_ui"], # Color de acento
+            text_color=COLOR_PALETTE["text_dark"], # Texto oscuro sobre acento claro
+            button_color=COLOR_PALETTE["primary_btn"], 
+            button_hover_color=COLOR_PALETTE["primary_hover"],
+            dropdown_fg_color=COLOR_PALETTE["accent_ui"],
+            dropdown_text_color=COLOR_PALETTE["text_dark"],
+            corner_radius=8 # Esquinas redondeadas
+        )
         self.combo_dia.grid(row=1, column=1, padx=widget_padx, pady=widget_pady, sticky="ew")
         self.combo_dia.set(self.DIAS_SEMANA[0])
 
-        ctk.CTkLabel(controls_frame, text="Clima:", font=label_font).grid(row=2, column=0, padx=widget_padx, pady=widget_pady, sticky="w")
-        self.combo_clima = ctk.CTkComboBox(controls_frame, values=self.CLIMAS, font=combo_font, width=200, height=35, state="readonly")
+        # Clima
+        ctk.CTkLabel(controls_frame, text="Clima:", font=label_font, text_color=COLOR_PALETTE["text_dark"]).grid(row=2, column=0, padx=widget_padx, pady=widget_pady, sticky="w")
+        self.combo_clima = ctk.CTkComboBox(
+            controls_frame, 
+            values=self.CLIMAS, 
+            font=combo_font, 
+            width=250, 
+            height=45, 
+            state="readonly",
+            fg_color=COLOR_PALETTE["accent_ui"],
+            text_color=COLOR_PALETTE["text_dark"],
+            button_color=COLOR_PALETTE["primary_btn"],
+            button_hover_color=COLOR_PALETTE["primary_hover"],
+            dropdown_fg_color=COLOR_PALETTE["accent_ui"],
+            dropdown_text_color=COLOR_PALETTE["text_dark"],
+            corner_radius=8
+        )
         self.combo_clima.grid(row=2, column=1, padx=widget_padx, pady=widget_pady, sticky="ew")
         self.combo_clima.set(self.CLIMAS[0])
 
-        ctk.CTkLabel(controls_frame, text="Tipo de pan:", font=label_font).grid(row=3, column=0, padx=widget_padx, pady=widget_pady, sticky="w")
-        self.combo_pan = ctk.CTkComboBox(controls_frame, values=self.PANES, font=combo_font, width=200, height=35, state="readonly")
+        # Tipo de pan
+        ctk.CTkLabel(controls_frame, text="Tipo de pan:", font=label_font, text_color=COLOR_PALETTE["text_dark"]).grid(row=3, column=0, padx=widget_padx, pady=widget_pady, sticky="w")
+        self.combo_pan = ctk.CTkComboBox(
+            controls_frame, 
+            values=self.PANES, 
+            font=combo_font, 
+            width=250, 
+            height=45, 
+            state="readonly",
+            fg_color=COLOR_PALETTE["accent_ui"],
+            text_color=COLOR_PALETTE["text_dark"],
+            button_color=COLOR_PALETTE["primary_btn"],
+            button_hover_color=COLOR_PALETTE["primary_hover"],
+            dropdown_fg_color=COLOR_PALETTE["accent_ui"],
+            dropdown_text_color=COLOR_PALETTE["text_dark"],
+            corner_radius=8
+        )
         self.combo_pan.grid(row=3, column=1, padx=widget_padx, pady=widget_pady, sticky="ew")
         self.combo_pan.set(self.PANES[0])
 
+        # Botón de Calcular Predicción
         btn = ctk.CTkButton(
             controls_frame, 
             text="Calcular Predicción", 
-            corner_radius=8, 
-            font=ctk.CTkFont(family="Arial", size=18, weight="bold"),
-            height=45,
+            corner_radius=12, # Más redondeado
+            font=ctk.CTkFont(family="Roboto", size=20, weight="bold"), # Fuente Roboto, más grande
+            height=55, # Más alto
+            fg_color=COLOR_PALETTE["primary_btn"], 
+            hover_color=COLOR_PALETTE["primary_hover"],
+            text_color=COLOR_PALETTE["text_light"],
             command=self.predecir
         )
-        btn.grid(row=4, column=0, columnspan=2, pady=(30, 20)) 
+        btn.grid(row=4, column=0, columnspan=2, pady=(40, 30)) # Más padding
 
+        # Etiqueta de Resultado
         self.label_result = ctk.CTkLabel(
             controls_frame, 
             text="Esperando selección...", 
-            font=ctk.CTkFont(family="Arial", size=20, weight="bold"),
-            text_color="gray70" 
+            font=ctk.CTkFont(family="Roboto", size=22, weight="bold"), # Fuente Roboto, más grande
+            text_color=COLOR_PALETTE["loading_text"], # Color inicial de carga
+            wraplength=controls_frame._current_width * 0.8 # Para que el texto se envuelva
         )
         self.label_result.grid(row=5, column=0, columnspan=2, pady=(10, 20))
         
+        # Ajustar la expansión de las columnas en controls_frame
         controls_frame.grid_columnconfigure(0, weight=1)
         controls_frame.grid_columnconfigure(1, weight=1)
-
 
     def _show_error_and_back(self, message):
         """Muestra un mensaje de error y un botón para volver al menú principal."""
@@ -123,9 +210,9 @@ class MainApp:
         error_label = ctk.CTkLabel(
             self.parent_frame, 
             text=message, 
-            font=ctk.CTkFont(family="Arial", size=18, weight="bold"), 
-            text_color="red", 
-            wraplength=400 
+            font=ctk.CTkFont(family="Roboto", size=18, weight="bold"), 
+            text_color=COLOR_PALETTE["error_text"], 
+            wraplength=self.parent_frame.winfo_width() * 0.7 
         )
         error_label.place(relx=0.5, rely=0.4, anchor="center")
 
@@ -133,13 +220,13 @@ class MainApp:
             self.parent_frame,
             text="Volver al Menú Principal",
             command=self.on_back if self.on_back else self.parent_frame.master.destroy,
-            fg_color="gray50",
-            hover_color="gray60",
-            corner_radius=8,
-            font=ctk.CTkFont(family="Arial", size=16)
+            fg_color=COLOR_PALETTE["secondary_btn"],
+            hover_color=COLOR_PALETTE["primary_hover"],
+            text_color=COLOR_PALETTE["text_light"],
+            corner_radius=10,
+            font=ctk.CTkFont(family="Roboto", size=16, weight="normal")
         )
         btn_back.place(relx=0.5, rely=0.6, anchor="center")
-
 
     def _atras(self):
         """Maneja la acción de volver al menú principal."""
@@ -153,7 +240,7 @@ class MainApp:
         pan = self.combo_pan.get()
 
         if pan not in self.PANES:
-            self.label_result.configure(text_color="red", text="Error: Tipo de pan no válido seleccionado.")
+            self.label_result.configure(text_color=COLOR_PALETTE["error_text"], text="Error: Tipo de pan no válido seleccionado.")
             return
 
         try:
@@ -161,14 +248,14 @@ class MainApp:
             clima_enc = self.le_clima.transform([clima])[0]
             
             X_input_raw = pd.DataFrame([[dia_enc, clima_enc]], columns=['Dia_De_La_Semana_Encoded', 'Clima_Encoded'])
-            X_input_scaled = self.scalers[pan].transform(X_input_raw.values) # <-- ¡Aquí está el cambio!
+            X_input_scaled = self.scalers[pan].transform(X_input_raw.values)
             
             pred_scaled = self.modelos[pan].predict(X_input_scaled, verbose=0)[0][0]
             pred = self.scalers_y[pan].inverse_transform([[pred_scaled]])[0][0]
             
             self.label_result.configure(
-                text_color="green", 
+                text_color=COLOR_PALETTE["success_text"], # Color para un resultado exitoso
                 text=f"Demanda estimada de {pan.replace('_Cantidad','').replace('_',' ')}: {int(pred):.0f} unidades" 
             )
         except Exception as e:
-            self.label_result.configure(text_color="red", text=f"Error al calcular predicción: {e}")
+            self.label_result.configure(text_color=COLOR_PALETTE["error_text"], text=f"Error al calcular predicción: {e}")
