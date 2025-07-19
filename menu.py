@@ -1,3 +1,4 @@
+# ... (código existente al principio del archivo menu.py)
 import customtkinter as ctk
 from tkinter import messagebox
 import os
@@ -5,6 +6,7 @@ import importlib.util
 import threading
 
 class MenuApp:
+    # ... (tu método __init__ y abrir_prediccion se mantienen igual)
     def __init__(self):
         # Establece el modo de apariencia a "Dark" para un look más moderno y profesional
         ctk.set_appearance_mode("Dark")
@@ -95,67 +97,92 @@ class MenuApp:
 
         threading.Thread(target=cargar_main).start()
 
-    def interpretar(self):
-      pass  
-      
+    # --- MÉTODO MODIFICADO ---
+    def analizar_ofertas(self):
+        """Carga el módulo de recomendación de ofertas y muestra su interfaz."""
+        for widget in self.main_frame.winfo_children():
+            widget.destroy()
+        
+        loading_label = ctk.CTkLabel(
+            self.main_frame, text="Cargando Módulo de Ofertas...",
+            font=ctk.CTkFont(family="Arial", size=20, weight="bold"), text_color="gray70"
+        )
+        loading_label.place(relx=0.5, rely=0.4, anchor="center")
+        
+        progress = ctk.CTkProgressBar(self.main_frame, mode="indeterminate", width=250)
+        progress.place(relx=0.5, rely=0.5, anchor="center")
+        progress.start()
+
+        def cargar_modulo_ofertas():
+            try:
+                spec = importlib.util.spec_from_file_location("interpretar_ofertas", os.path.join(os.path.dirname(__file__), "interpretar_ofertas.py"))
+                ofertas_mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(ofertas_mod)
+                
+                if hasattr(ofertas_mod, "OfertasApp"):
+                    self.main_frame.after(0, lambda: _finish_loading(ofertas_mod.OfertasApp))
+                else:
+                    self.main_frame.after(0, lambda: _finish_loading(None, "Error: 'interpretar_ofertas.py' no contiene la clase 'OfertasApp'."))
+            except Exception as e:
+                self.main_frame.after(0, lambda: _finish_loading(None, f"Error al cargar 'interpretar_ofertas.py': {e}"))
+
+        def _finish_loading(app_class, error_message=None):
+            progress.stop()
+            for widget in self.main_frame.winfo_children():
+                widget.destroy()
+            
+            if error_message:
+                ctk.CTkLabel(self.main_frame, text=error_message, text_color="red").place(relx=0.5, rely=0.5, anchor="center")
+                ctk.CTkButton(self.main_frame, text="Volver", command=self.mostrar_menu_principal).place(relx=0.5, rely=0.6, anchor="center")
+            elif app_class:
+                app_class(self.main_frame, on_back=self.mostrar_menu_principal)
+
+        threading.Thread(target=cargar_modulo_ofertas).start()
+    
     def cerrar(self):
         """Cierra la aplicación."""
         self.root.destroy()
-
+    
+    # --- MÉTODO MODIFICADO ---
     def mostrar_menu_principal(self):
         """Muestra el menú principal de la aplicación."""
         for widget in self.main_frame.winfo_children():
             widget.destroy()
             
-        # Contenedor para centrar el título y los botones
         menu_container = ctk.CTkFrame(self.main_frame, fg_color="transparent")
         menu_container.pack(expand=True)
 
         title_label = ctk.CTkLabel(
-            menu_container, 
-            text="PanKira AI", 
+            menu_container, text="PanKira AI", 
             font=ctk.CTkFont(family="Arial", size=48, weight="bold"),
-            text_color="gray80" # Un color que resalte en modo oscuro
+            text_color="gray80"
         )
-        title_label.pack(pady=40) # Mayor padding para separar del borde superior
+        title_label.pack(pady=40)
 
-        # Estilo consistente para los botones del menú
         button_font = ctk.CTkFont(family="Arial", size=18)
         button_width = 200
         button_height = 45
-        button_pady = 15 # Espaciado entre botones
+        button_pady = 15
 
         btn_predecir = ctk.CTkButton(
-            menu_container, 
-            text="Predecir Demanda", 
-            font=button_font, 
-            width=button_width, 
-            height=button_height,
-            corner_radius=8, # Bordes más suaves
+            menu_container, text="Predecir Demanda", font=button_font, 
+            width=button_width, height=button_height, corner_radius=8,
             command=self.abrir_prediccion
         )
         btn_predecir.pack(pady=button_pady)
 
+        # Botón actualizado para llamar a la nueva función
         btn_interpretar = ctk.CTkButton(
-            menu_container, 
-            text="Por implementar", 
-            font=button_font, 
-            width=button_width, 
-            height=button_height,
-            corner_radius=8, 
-            command=self.interpretar
+            menu_container, text="Analizar Ofertas", font=button_font, 
+            width=button_width, height=button_height, corner_radius=8,
+            command=self.analizar_ofertas # Se cambió el comando
         )
         btn_interpretar.pack(pady=button_pady)
 
         btn_cerrar = ctk.CTkButton(
-            menu_container, 
-            text="Salir", # Más directo que "Cerrar"
-            font=button_font, 
-            width=button_width, 
-            height=button_height,
-            corner_radius=8,
-            fg_color="red", # Botón de salir en rojo para destacarlo
-            hover_color="darkred",
+            menu_container, text="Salir", font=button_font,
+            width=button_width, height=button_height, corner_radius=8,
+            fg_color="red", hover_color="darkred",
             command=self.cerrar
         )
         btn_cerrar.pack(pady=button_pady)
