@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from keras.callbacks import EarlyStopping
 from keras.layers import Dropout
 from keras.regularizers import l2
-
+import subprocess
 
 PANES = [
     "Pan_Canilla_Cantidad",
@@ -127,10 +127,20 @@ for idx, pan in enumerate(PANES):
     model.save(f"models/modelo_{pan}.keras")
     joblib.dump(scaler_X, f"models/scaler_X_{pan}.pkl")
     joblib.dump(scaler_y, f"models/scaler_y_{pan}.pkl")
-    
+
     # Mostrar progreso de entrenamiento
     percent = int(((idx + 1) / total) * 100)
     sys.stdout.write(f"\rEntrenando modelos: [{'#' * percent}{'.' * (100 - percent)}] {percent}%")
     sys.stdout.flush()
 
 print("\nEntrenamiento completado.")
+
+# Ejecutar el script de análisis para actualizar los promedios de ventas
+print("\nActualizando análisis de ventas para sistema de ofertas...")
+
+try:
+    # Se utiliza subprocess para llamar al nuevo script de forma segura
+    subprocess.run([sys.executable, 'analisis_ofertas.py'], check=True)
+except (subprocess.CalledProcessError, FileNotFoundError) as e:
+    print(f"\nError al ejecutar 'analisis_ofertas.py': {e}")
+    print("Por favor, ejecuta el script manualmente para generar los datos de promedios.")
