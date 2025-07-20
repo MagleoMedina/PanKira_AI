@@ -235,7 +235,10 @@ class OfertasApp:
                 self.textbox_result.insert("1.0", titulo + "\n".join(recomendaciones)) 
                 self.textbox_result.configure(text_color=COLOR_PALETTE["success_text"])
             else:
-                self.textbox_result.insert("1.0", "Análisis completado. No se detectan bajas significativas en las ventas proyectadas. ¡No se requieren ofertas especiales para hoy!")
+                self.textbox_result.insert(
+                    "1.0", 
+                    f"Análisis completado para el día {dia} con clima {clima}. No se detectan bajas significativas en las ventas proyectadas. ¡No se requieren ofertas especiales para hoy!"
+                )
                 self.textbox_result.configure(text_color=COLOR_PALETTE["text_dark"])
             self.textbox_result.configure(state="disabled")
 
