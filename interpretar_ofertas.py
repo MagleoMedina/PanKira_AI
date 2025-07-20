@@ -3,8 +3,7 @@ from tensorflow import keras
 import customtkinter as ctk
 import pandas as pd
 
-# --- Paleta de Colores Consistente con menu.py y main.py ---
-# Adaptada para un fondo claro y una estética de panadería cálida.
+# Definición de la paleta de colores para la aplicación
 COLOR_PALETTE = {
     "bg_main": "#F8F5EB",      # Crema muy claro / Casi blanco, cálido como el interior del pan
     "bg_panel": "#FFFFFF",     # Blanco puro para paneles y frames internos
@@ -176,19 +175,18 @@ class OfertasApp:
         # Textbox de Resultados
         self.textbox_result = ctk.CTkTextbox(
             controls_frame, 
-            font=ctk.CTkFont(family="Roboto", size=15, weight="normal"), # Fuente Roboto para resultados
+            font=ctk.CTkFont(family="Roboto", size=15, weight="normal"), 
             height=200, 
             wrap="word", 
             state="disabled",
-            fg_color=COLOR_PALETTE["accent_ui"], # Fondo del textbox de resultados
-            text_color=COLOR_PALETTE["text_dark"], # Texto oscuro
+            fg_color=COLOR_PALETTE["accent_ui"], 
+            text_color=COLOR_PALETTE["text_dark"], 
             border_color=COLOR_PALETTE["border_light"],
             border_width=1,
             corner_radius=8
         )
         self.textbox_result.grid(row=4, column=0, columnspan=2, pady=(10, 20), sticky="nsew", padx=widget_padx)
 
-        # La columna 1 ya se expande, y la fila 4 ya se expande.
 
     def recomendar_ofertas(self):
         """
@@ -215,7 +213,6 @@ class OfertasApp:
                 prediccion_actual = int(prediccion_actual)
 
                 # 2. Obtener el promedio histórico
-                # CORRECCIÓN: Usar .get() con un diccionario vacío como fallback para evitar KeyError
                 promedio_historico = int(self.promedios_ventas.get(pan, {}).get(dia, 0))
 
 
@@ -235,26 +232,20 @@ class OfertasApp:
             self.textbox_result.delete("1.0", "end")
             if recomendaciones:
                 titulo = f"Sugerencias de Ofertas para {dia} con clima {clima}:\n{'-'*50}\n\n"
-                # Eliminado el argumento text_color aquí, ya que CTkTextbox.insert() no lo soporta
                 self.textbox_result.insert("1.0", titulo + "\n".join(recomendaciones)) 
-                # Si quieres cambiar el color de todo el texto en el textbox, hazlo así:
                 self.textbox_result.configure(text_color=COLOR_PALETTE["success_text"])
             else:
-                # Eliminado el argumento text_color aquí
                 self.textbox_result.insert("1.0", "Análisis completado. No se detectan bajas significativas en las ventas proyectadas. ¡No se requieren ofertas especiales para hoy!")
-                # Si quieres cambiar el color de todo el texto en el textbox, hazlo así:
                 self.textbox_result.configure(text_color=COLOR_PALETTE["text_dark"])
             self.textbox_result.configure(state="disabled")
 
         except Exception as e:
-            # Asegurarse de que el error se muestre correctamente
             self._show_error_and_back(f"Error al analizar ofertas: {e}")
 
     def _show_error_and_back(self, message):
         """Muestra un mensaje de error y un botón para volver."""
         for widget in self.parent_frame.winfo_children():
             widget.destroy()
-        # Aplicar la paleta de colores y fuentes consistentes al mensaje de error
         ctk.CTkLabel(
             self.parent_frame, 
             text=message, 
@@ -262,7 +253,6 @@ class OfertasApp:
             text_color=COLOR_PALETTE["error_text"], 
             wraplength=self.parent_frame.winfo_width() * 0.7
         ).place(relx=0.5, rely=0.4, anchor="center")
-        # Aplicar la paleta de colores y fuentes consistentes al botón de volver
         ctk.CTkButton(
             self.parent_frame, 
             text="Volver al Menú", 

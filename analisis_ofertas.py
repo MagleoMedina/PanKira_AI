@@ -41,5 +41,3 @@ ruta_guardado = "models/promedios_ventas.pkl"
 joblib.dump(promedios_ventas, ruta_guardado)
 
 print(f"Análisis completado. Los promedios de ventas se han guardado en '{ruta_guardado}'.")
-# Ejemplo de cómo se ven los datos guardados:
-# {'Pan_Canilla_Cantidad': {'Lunes': 95, 'Martes': 88, ...}, 'Pan_Frances_Cantidad': ...}

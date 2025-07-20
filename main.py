@@ -3,8 +3,8 @@ from tensorflow import keras
 import customtkinter as ctk
 import pandas as pd 
 
-# --- Paleta de Colores Consistente con menu.py ---
-# Adaptada para un fondo claro y una estética de panadería cálida.
+# Definición de la paleta de colores para la aplicación
+
 COLOR_PALETTE = {
     "bg_main": "#F8F5EB",      # Crema muy claro / Casi blanco, cálido como el interior del pan
     "bg_panel": "#FFFFFF",     # Blanco puro para paneles y frames internos
@@ -105,12 +105,12 @@ class MainApp:
         ctk.CTkLabel(
             controls_frame, 
             text="Predicción de Demanda de Pan", 
-            font=ctk.CTkFont(family="Georgia", size=32, weight="bold"), # Fuente Georgia, más grande
+            font=ctk.CTkFont(family="Georgia", size=32, weight="bold"), 
             text_color=COLOR_PALETTE["primary_btn"] # Color principal
         ).grid(row=0, column=0, columnspan=2, pady=(30, 40)) # Más padding
 
-        label_font = ctk.CTkFont(family="Roboto", size=16, weight="normal") # Fuente Roboto normal
-        combo_font = ctk.CTkFont(family="Roboto", size=16, weight="normal") # Fuente Roboto normal
+        label_font = ctk.CTkFont(family="Roboto", size=16, weight="normal") 
+        combo_font = ctk.CTkFont(family="Roboto", size=16, weight="normal") 
         widget_pady = 18 # Más espacio entre widgets
         widget_padx = 25 # Más espacio lateral
 
@@ -121,15 +121,15 @@ class MainApp:
             values=self.DIAS_SEMANA, 
             font=combo_font, 
             width=250, 
-            height=45, # Altura ajustada
+            height=45, 
             state="readonly",
-            fg_color=COLOR_PALETTE["accent_ui"], # Color de acento
-            text_color=COLOR_PALETTE["text_dark"], # Texto oscuro sobre acento claro
+            fg_color=COLOR_PALETTE["accent_ui"], 
+            text_color=COLOR_PALETTE["text_dark"], 
             button_color=COLOR_PALETTE["primary_btn"], 
             button_hover_color=COLOR_PALETTE["primary_hover"],
             dropdown_fg_color=COLOR_PALETTE["accent_ui"],
             dropdown_text_color=COLOR_PALETTE["text_dark"],
-            corner_radius=8 # Esquinas redondeadas
+            corner_radius=8 
         )
         self.combo_dia.grid(row=1, column=1, padx=widget_padx, pady=widget_pady, sticky="ew")
         self.combo_dia.set(self.DIAS_SEMANA[0])
@@ -178,22 +178,22 @@ class MainApp:
         btn = ctk.CTkButton(
             controls_frame, 
             text="Calcular Predicción", 
-            corner_radius=12, # Más redondeado
-            font=ctk.CTkFont(family="Roboto", size=20, weight="bold"), # Fuente Roboto, más grande
-            height=55, # Más alto
+            corner_radius=12, 
+            font=ctk.CTkFont(family="Roboto", size=20, weight="bold"),
+            height=55, 
             fg_color=COLOR_PALETTE["primary_btn"], 
             hover_color=COLOR_PALETTE["primary_hover"],
             text_color=COLOR_PALETTE["text_light"],
             command=self.predecir
         )
-        btn.grid(row=4, column=0, columnspan=2, pady=(40, 30)) # Más padding
+        btn.grid(row=4, column=0, columnspan=2, pady=(40, 30)) 
 
         # Etiqueta de Resultado
         self.label_result = ctk.CTkLabel(
             controls_frame, 
-            text="Esperando selección...", 
-            font=ctk.CTkFont(family="Roboto", size=22, weight="bold"), # Fuente Roboto, más grande
-            text_color=COLOR_PALETTE["loading_text"], # Color inicial de carga
+            text="Esperando selección...",
+            font=ctk.CTkFont(family="Roboto", size=22, weight="bold"), 
+            text_color=COLOR_PALETTE["loading_text"], 
             wraplength=controls_frame._current_width * 0.8 # Para que el texto se envuelva
         )
         self.label_result.grid(row=5, column=0, columnspan=2, pady=(10, 20))
@@ -254,7 +254,7 @@ class MainApp:
             pred = self.scalers_y[pan].inverse_transform([[pred_scaled]])[0][0]
             
             self.label_result.configure(
-                text_color=COLOR_PALETTE["success_text"], # Color para un resultado exitoso
+                text_color=COLOR_PALETTE["success_text"], 
                 text=f"Demanda estimada de {pan.replace('_Cantidad','').replace('_',' ')}: {int(pred):.0f} unidades" 
             )
         except Exception as e:

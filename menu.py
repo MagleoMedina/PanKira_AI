@@ -4,7 +4,7 @@ import os
 import importlib.util
 import threading
 
-# --- NUEVA Paleta de Colores para Tema Claro ---
+# Definición de la paleta de colores para la aplicación
 
 COLOR_PALETTE = {
     "bg_main": "#F8F5EB",      # Crema muy claro / Casi blanco, cálido como el interior del pan
@@ -105,7 +105,7 @@ class MenuApp:
                     fg_color=COLOR_PALETTE["secondary_btn"], 
                     hover_color=COLOR_PALETTE["primary_hover"],
                     text_color=COLOR_PALETTE["text_light"], # Texto claro sobre botón oscuro
-                    font=ctk.CTkFont(family="Roboto", size=16, weight="normal"), # Usar weight="normal"
+                    font=ctk.CTkFont(family="Roboto", size=16, weight="normal"), 
                     width=200, height=45, corner_radius=10
                 ).place(relx=0.5, rely=0.6, anchor="center")
             elif main_func:
@@ -117,7 +117,7 @@ class MenuApp:
                 ctk.CTkLabel(
                     self.main_frame, text="Error desconocido al cargar módulo.",
                     text_color=COLOR_PALETTE["error_text"],
-                    font=ctk.CTkFont(family="Roboto", size=18, weight="bold") # Usar weight="bold"
+                    font=ctk.CTkFont(family="Roboto", size=18, weight="bold") 
                 ).place(relx=0.5, rely=0.5, anchor="center")
 
         threading.Thread(target=cargar_main).start()
@@ -147,6 +147,7 @@ class MenuApp:
         progress.start()
 
         def cargar_modulo_ofertas():
+            """Carga el módulo interpretar_ofertas.py y muestra su interfaz."""
             try:
                 spec = importlib.util.spec_from_file_location("interpretar_ofertas", os.path.join(os.path.dirname(__file__), "interpretar_ofertas.py"))
                 ofertas_mod = importlib.util.module_from_spec(spec)
@@ -160,6 +161,7 @@ class MenuApp:
                 self.main_frame.after(0, lambda: _finish_loading_ofertas(None, f"Error al cargar 'interpretar_ofertas.py': {e}"))
 
         def _finish_loading_ofertas(app_class, error_message=None):
+            """Finaliza la carga del módulo de ofertas y muestra el contenido."""
             progress.stop()
             for widget in self.main_frame.winfo_children():
                 widget.destroy()
@@ -213,10 +215,10 @@ class MenuApp:
         # Título de la aplicación con fuente más impactante y color cálido
         title_label = ctk.CTkLabel(
             menu_card, text="PanKira AI", 
-            font=ctk.CTkFont(family="Georgia", size=60, weight="bold"), # Opciones: 'Georgia', 'Merriweather', 'Playfair Display'
+            font=ctk.CTkFont(family="Georgia", size=60, weight="bold"), 
             text_color=COLOR_PALETTE["primary_btn"]
         )
-        title_label.pack(pady=(50, 20)) # Más padding superior
+        title_label.pack(pady=(50, 20)) 
 
         subtitle_label = ctk.CTkLabel(
             menu_card, text="Gestiona tu panadería con IA",
