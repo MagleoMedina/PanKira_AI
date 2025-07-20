@@ -16,7 +16,8 @@ PanKira AI utiliza **modelos de redes neuronales** entrenados con un dataset sim
 - Pan de Coco  
 - Pan de Arequipe  
 
-El usuario ingresa el **día** y el **clima**, y el sistema sugiere cuántas unidades hornear de cada tipo de pan.
+El usuario ingresa el **día** y el **clima**, y el sistema sugiere cuántas unidades hornear de cada tipo de pan.  
+Además, el sistema analiza las predicciones y compara con los promedios históricos para recomendar ofertas en caso de bajas significativas en la demanda proyectada.
 
 ## ¿Cómo funciona?
 
@@ -27,7 +28,8 @@ El usuario ingresa el **día** y el **clima**, y el sistema sugiere cuántas uni
    Cada tipo de pan tiene su propio modelo de red neuronal entrenado con TensorFlow/Keras. Los modelos se guardan en la carpeta `models/`.
 
 3. **Interfaz gráfica (GUI)**  
-   Una app en `Python` con **CustomTkinter** permite al panadero seleccionar el día, el clima y el tipo de pan. La app devuelve una predicción de demanda al instante.
+   Una app en `Python` con **CustomTkinter** permite al panadero seleccionar el día, el clima y el tipo de pan. La app devuelve una predicción de demanda al instante.  
+   Además, el análisis incluye el día y el clima seleccionados en los resultados mostrados, y sugiere ofertas si las ventas proyectadas son significativamente más bajas que los promedios históricos.
 
 ## Estructura del proyecto
 
@@ -39,6 +41,8 @@ PankiraAI/
 │ ├── scaler_X_Pan_Frances_Cantidad.pkl
 │ └── ...
 ├── entrenar_y_guardar.py # Script para entrenar los modelos
+├── interpretar_ofertas.py # Lógica para interpretar ofertas
+├── analisis_ofertas.py # Lógica para analizar y recomendar ofertas
 ├── main.py # Interfaz de predicción
 ├── menu.py # Menú principal de la app
 └── pankira.csv # Dataset simulado
@@ -66,7 +70,7 @@ Esto generará los modelos entrenados en la carpeta models/.
 ```bash
 python menu.py
 ```
-Se abrirá una app de escritorio donde puedes seleccionar día, clima y tipo de pan, y ver la predicción.
+Se abrirá una app de escritorio donde puedes seleccionar día, clima y tipo de pan, y ver la predicción. Los resultados incluirán el día y el clima seleccionados, junto con recomendaciones de ofertas si son necesarias.
 
 ## Créditos
 
