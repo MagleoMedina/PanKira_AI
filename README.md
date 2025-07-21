@@ -40,6 +40,9 @@ PankiraAI/
 │ ├── modelo_Pan_Frances_Cantidad.keras
 │ ├── scaler_X_Pan_Frances_Cantidad.pkl
 │ └── ...
+├── assets/ 
+│ ├── panKira.jpg
+│ ├── logoPanKira.jpg
 ├── entrenar_y_guardar.py # Script para entrenar los modelos
 ├── interpretar_ofertas.py # Lógica para interpretar ofertas
 ├── analisis_ofertas.py # Lógica para analizar y recomendar ofertas
